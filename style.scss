@@ -1,0 +1,589 @@
+//nav bar styling
+
+$primaryPurplelight: #7e57c2;
+$darkerPurple: #673ab7;
+$gray: #828282;
+
+$small: 1rem;
+$large: 3rem;
+
+
+$fontPrimary: "Girlroybold";
+$fontNunito: "Nunito";
+
+@font-face {
+  font-family: "Girlroybold";
+  src: url("CustomFont.eot");
+  src: url("/assets/images/fonts/gilroy-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("CustomFont.eot");
+  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-item-button {
+  padding: 10px 25px 10px 25px;
+  color: #fff;
+  border-radius: 5px;
+  background: $darkerPurple;
+  font-family: $fontNunito;
+}
+
+li {
+  list-style: none;
+}
+
+.brand {
+  display: flex;
+  font-size: 2rem;
+  color: $primaryPurplelight;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: "Girlroybold";
+
+  span {
+    margin-top: -10px;
+    font-size: 1rem;
+  }
+}
+
+nav {
+  display: flex;
+  padding: 1rem 5rem 1rem 5rem;
+  justify-content: space-between;
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito";
+
+    li {
+      margin-right: 20px;
+    }
+
+    .link-item {
+      a {
+        color: $gray;
+      }
+    }
+  }
+}
+
+main {
+
+  //hero section style
+  .hero-section {
+    display: flex;
+    padding: 5rem;
+
+    .hero-copy {
+      font-family: "Girlroybold";
+
+      h1 {
+        font-size: $small;
+        color: $gray;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: $large;
+        margin-top: 0;
+        color: $primaryPurplelight;
+      }
+
+      .social-icons-top {
+        display: flex;
+
+        img {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .hero-images {
+      display: flex;
+      flex: 3;
+      position: relative;
+      // margin-left: 20%;
+      justify-content: flex-end;
+
+      .first-image {
+        position: relative;
+        min-width: 300px;
+        height: 100%;
+        background-image: url(/assets/images/code.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        left: 5rem;
+
+        .dotted-svg {
+          position: absolute;
+          top: 85%;
+          left: 5%;
+        }
+      }
+
+      .second-image-container {
+        position: relative;
+        min-width: 300px;
+        height: 100%;
+        left: -3rem;
+        top: 20%;
+
+        .rounded-object {
+          position: absolute;
+          left: 75%;
+          top: -20%;
+          //   background-color: $primaryPurplelight;
+          z-index: -2;
+        }
+
+        .second-image {
+          position: relative;
+          min-width: 300px;
+          height: 100%;
+          background-image: url(/assets/images/coder.jpeg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 5px;
+          z-index: 20;
+
+          .square-svg {
+            position: absolute;
+            top: 70%;
+            left: 90%;
+            width: 50px;
+            height: 50px;
+            background-color: #f47b9e;
+          }
+        }
+      }
+    }
+  }
+
+  //skills style
+  .skills {
+    background: #fcfcfc;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 5rem 7rem 5rem 7rem;
+
+    h2 {
+      font-family: "Girlroybold";
+      color: $gray;
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 2.5rem;
+    }
+
+    .skills-images {
+      display: flex;
+      justify-content: center;
+
+      i {
+        color: $gray;
+        font-size: 3.5rem;
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  //services section
+  .services {
+    padding: 2rem 5rem 5rem 5rem;
+    background: #fcfcfc;
+
+    h3 {
+      text-align: center;
+      color: $primaryPurplelight;
+      font-size: $large;
+      font-family: "Girlroybold";
+      margin-top: 0;
+
+      span {
+        font-family: "Nunito";
+        color: #ff0068;
+        font-size: 14px;
+        background: rgba(255, 0, 104, 0.1);
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+      }
+    }
+
+    .btn {
+      background-color: white;
+      border: 1px solid #cccccc;
+      color: #696969;
+      padding: 0.5rem;
+      text-transform: lowercase;
+    }
+
+    .btn--block {
+      display: block;
+      width: 100%;
+    }
+
+    .cards {
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cards__item {
+      display: -webkit-box;
+      display: flex;
+      padding: 1rem;
+
+      &:hover {
+
+        .card {
+          background-color: $darkerPurple;
+
+          .card__text {
+            color: #fff;
+          }
+
+          .card__title {
+            color: #fff;
+          }
+        }
+
+        svg {
+
+          path,
+          line,
+          rect,
+          circle {
+            stroke: #fff;
+          }
+
+          #Path_2 {
+            fill: #E4D9F3;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 40rem) {
+      .cards__item {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 56rem) {
+      .cards__item {
+        width: 25%;
+      }
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      overflow: hidden;
+
+      svg {
+        margin: 1rem;
+      }
+
+    }
+
+    .card:hover .card__image {
+      -webkit-filter: contrast(100%);
+      filter: contrast(100%);
+    }
+
+    .card__content {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-flex: 1;
+      flex: 1 1 auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .card__title {
+      font-family: $fontPrimary;
+      color: $darkerPurple;
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .card__text {
+      font-family: $fontNunito;
+      color: $darkerPurple;
+      -webkit-box-flex: 1;
+      flex: 1 1 auto;
+      font-size: 0.83rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+  //portfolio section
+  .portfolio {
+    padding: 3rem 3rem 5rem 3rem;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+
+    h4 {
+      font-family: $fontPrimary;
+      color: $darkerPurple;
+      font-size: $large;
+      margin-bottom: $small;
+      margin-top: 0;
+    }
+
+    p {
+      font-family: $fontNunito;
+    }
+
+
+    .project-card-container {
+      display: flex;
+      padding-bottom: $large;
+
+      .left-card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 1rem;
+
+        .card-item-one {
+          max-width: 100%;
+          height: 320px;
+          background-color: red;
+          margin: 1rem;
+          margin-bottom: 2rem;
+          border-radius: 10px;
+        }
+
+        .card-item-two {
+          max-width: 100%;
+          height: 420px;
+          background-color: blue;
+          margin: 1rem;
+          border-radius: 10px;
+        }
+      }
+
+      .right-card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 1rem;
+
+        .card-item-one {
+          max-width: 100%;
+          height: 320px;
+          background-color: red;
+          order: 2;
+          margin: 1rem;
+          border-radius: 10px;
+        }
+
+        .card-item-two {
+          max-width: 100%;
+          height: 420px;
+          background-color: blue;
+          order: 1;
+          margin: 1rem;
+          margin-bottom: 2rem;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+
+  ///lets create a project styles
+  .lets-create {
+    display: flex;
+    height: auto;
+    padding: 5rem 5rem 0rem 5rem;
+    justify-content: space-between;
+
+    .create-copy {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+
+      h4 {
+        font-family: $fontPrimary;
+        font-size: $large;
+        color: $darkerPurple;
+        margin-bottom: $small;
+      }
+
+      p {
+        font-family: $fontNunito;
+        color: $gray;
+      }
+
+      .name {
+        color: #000;
+        margin-bottom: $small;
+      }
+
+      .button-container {
+        margin-top: $small;
+
+        a {
+          cursor: pointer;
+          font-family: $fontNunito;
+        }
+      }
+    }
+
+    .portfolio-photo-section {
+      display: flex;
+      flex: 1;
+      position: relative;
+      justify-content: flex-end;
+
+      .portrait-photo {
+        position: absolute;
+        top: -20%;
+        left: 22%;
+
+        img {
+          border-radius: 40%;
+        }
+      }
+    }
+  }
+
+
+  //contact
+  .contact {
+    display: flex;
+    margin: 5rem 3rem 0 3rem;
+    padding: 4rem;
+    background: $darkerPurple;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-family: $fontPrimary;
+      font-size: $large;
+      color: #fff;
+      margin: 0;
+    }
+
+    a {
+      display: flex;
+      padding: 15px 35px 15px 35px;
+      background: #fff;
+      color: $darkerPurple;
+      font-family: $fontNunito;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+
+
+  footer {
+    padding: 6rem;
+    font-family: $fontNunito;
+
+    .footer-section-top {
+      display: flex;
+      margin-bottom: $large;
+
+      border-bottom: 1px solid $gray;
+
+      .brand-left {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+          font-family: $fontNunito;
+          color: $gray;
+        }
+      }
+
+      .footer-links-right {
+        display: flex;
+        margin-left: auto;
+        flex: 3;
+        justify-content: flex-end;
+
+        .footer-links {
+          margin-right: $large;
+
+          li {
+            margin-bottom: 10px;
+
+            &:nth-child(1) {
+              font-family: $fontPrimary;
+              color: $darkerPurple;
+            }
+          }
+
+          .social {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid $primaryPurplelight;
+
+
+            svg {
+              stroke: $darkerPurple !important;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      color: $gray;
+    }
+  }
+}

@@ -1,0 +1,671 @@
+@font-face {
+  font-family: "Girlroybold";
+  src: url("CustomFont.eot");
+  src: url("/assets/images/fonts/gilroy-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("CustomFont.eot");
+  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-item-button {
+  padding: 10px 25px 10px 25px;
+  color: #fff;
+  border-radius: 5px;
+  background: #673ab7;
+  font-family: "Nunito";
+}
+
+li {
+  list-style: none;
+}
+
+.brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  color: #7e57c2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: "Girlroybold";
+}
+
+.brand span {
+  margin-top: -10px;
+  font-size: 1rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 5rem 1rem 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Nunito";
+}
+
+nav .nav-links li {
+  margin-right: 20px;
+}
+
+nav .nav-links .link-item a {
+  color: #828282;
+}
+
+main .hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5rem;
+}
+
+main .hero-section .hero-copy {
+  font-family: "Girlroybold";
+}
+
+main .hero-section .hero-copy h1 {
+  font-size: 1rem;
+  color: #828282;
+  margin-bottom: 0;
+}
+
+main .hero-section .hero-copy h2 {
+  font-size: 3rem;
+  margin-top: 0;
+  color: #7e57c2;
+}
+
+main .hero-section .hero-copy .social-icons-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .hero-section .hero-copy .social-icons-top img {
+  margin-right: 20px;
+}
+
+main .hero-section .hero-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .hero-section .hero-images .first-image {
+  position: relative;
+  min-width: 300px;
+  height: 100%;
+  background-image: url(/assets/images/code.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  left: 5rem;
+}
+
+main .hero-section .hero-images .first-image .dotted-svg {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+}
+
+main .hero-section .hero-images .second-image-container {
+  position: relative;
+  min-width: 300px;
+  height: 100%;
+  left: -3rem;
+  top: 20%;
+}
+
+main .hero-section .hero-images .second-image-container .rounded-object {
+  position: absolute;
+  left: 75%;
+  top: -20%;
+  z-index: -2;
+}
+
+main .hero-section .hero-images .second-image-container .second-image {
+  position: relative;
+  min-width: 300px;
+  height: 100%;
+  background-image: url(/assets/images/coder.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  z-index: 20;
+}
+
+main .hero-section .hero-images .second-image-container .second-image .square-svg {
+  position: absolute;
+  top: 70%;
+  left: 90%;
+  width: 50px;
+  height: 50px;
+  background-color: #f47b9e;
+}
+
+main .skills {
+  background: #fcfcfc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem 7rem 5rem 7rem;
+}
+
+main .skills h2 {
+  font-family: "Girlroybold";
+  color: #828282;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 2.5rem;
+}
+
+main .skills .skills-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .skills .skills-images i {
+  color: #828282;
+  font-size: 3.5rem;
+  margin-right: 3rem;
+}
+
+main .services {
+  padding: 2rem 5rem 5rem 5rem;
+  background: #fcfcfc;
+}
+
+main .services h3 {
+  text-align: center;
+  color: #7e57c2;
+  font-size: 3rem;
+  font-family: "Girlroybold";
+  margin-top: 0;
+}
+
+main .services h3 span {
+  font-family: "Nunito";
+  color: #ff0068;
+  font-size: 14px;
+  background: rgba(255, 0, 104, 0.1);
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+}
+
+main .services .btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+main .services .btn--block {
+  display: block;
+  width: 100%;
+}
+
+main .services .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main .services .cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+}
+
+main .services .cards__item:hover .card {
+  background-color: #673ab7;
+}
+
+main .services .cards__item:hover .card .card__text {
+  color: #fff;
+}
+
+main .services .cards__item:hover .card .card__title {
+  color: #fff;
+}
+
+main .services .cards__item:hover svg path,
+main .services .cards__item:hover svg line,
+main .services .cards__item:hover svg rect,
+main .services .cards__item:hover svg circle {
+  stroke: #fff;
+}
+
+main .services .cards__item:hover svg #Path_2 {
+  fill: #E4D9F3;
+}
+
+@media (min-width: 40rem) {
+  main .services .cards__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  main .services .cards__item {
+    width: 25%;
+  }
+}
+
+main .services .card {
+  background-color: white;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  overflow: hidden;
+}
+
+main .services .card svg {
+  margin: 1rem;
+}
+
+main .services .card:hover .card__image {
+  -webkit-filter: contrast(100%);
+  filter: contrast(100%);
+}
+
+main .services .card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 1rem;
+}
+
+main .services .card__title {
+  font-family: "Girlroybold";
+  color: #673ab7;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+main .services .card__text {
+  font-family: "Nunito";
+  color: #673ab7;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  font-size: 0.83rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+main .portfolio {
+  padding: 3rem 3rem 5rem 3rem;
+  text-align: center;
+}
+
+main .portfolio img {
+  max-width: 100%;
+}
+
+main .portfolio h4 {
+  font-family: "Girlroybold";
+  color: #673ab7;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+main .portfolio p {
+  font-family: "Nunito";
+}
+
+main .portfolio .project-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 3rem;
+}
+
+main .portfolio .project-card-container .left-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 1rem;
+}
+
+main .portfolio .project-card-container .left-card .card-item-one {
+  max-width: 100%;
+  height: 320px;
+  background-color: red;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+main .portfolio .project-card-container .left-card .card-item-two {
+  max-width: 100%;
+  height: 420px;
+  background-color: blue;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+main .portfolio .project-card-container .right-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 1rem;
+}
+
+main .portfolio .project-card-container .right-card .card-item-one {
+  max-width: 100%;
+  height: 320px;
+  background-color: red;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+main .portfolio .project-card-container .right-card .card-item-two {
+  max-width: 100%;
+  height: 420px;
+  background-color: blue;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+main .lets-create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  padding: 5rem 5rem 0rem 5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .lets-create .create-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .lets-create .create-copy h4 {
+  font-family: "Girlroybold";
+  font-size: 3rem;
+  color: #673ab7;
+  margin-bottom: 1rem;
+}
+
+main .lets-create .create-copy p {
+  font-family: "Nunito";
+  color: #828282;
+}
+
+main .lets-create .create-copy .name {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+main .lets-create .create-copy .button-container {
+  margin-top: 1rem;
+}
+
+main .lets-create .create-copy .button-container a {
+  cursor: pointer;
+  font-family: "Nunito";
+}
+
+main .lets-create .portfolio-photo-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .lets-create .portfolio-photo-section .portrait-photo {
+  position: absolute;
+  top: -20%;
+  left: 22%;
+}
+
+main .lets-create .portfolio-photo-section .portrait-photo img {
+  border-radius: 40%;
+}
+
+main .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5rem 3rem 0 3rem;
+  padding: 4rem;
+  background: #673ab7;
+  border-radius: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .contact p {
+  font-family: "Girlroybold";
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+}
+
+main .contact a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 35px 15px 35px;
+  background: #fff;
+  color: #673ab7;
+  font-family: "Nunito";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+main .contact a svg {
+  margin-right: 10px;
+}
+
+main footer {
+  padding: 6rem;
+  font-family: "Nunito";
+}
+
+main footer .footer-section-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #828282;
+}
+
+main footer .footer-section-top .brand-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main footer .footer-section-top .brand-left p {
+  font-family: "Nunito";
+  color: #828282;
+}
+
+main footer .footer-section-top .footer-links-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main footer .footer-section-top .footer-links-right .footer-links {
+  margin-right: 3rem;
+}
+
+main footer .footer-section-top .footer-links-right .footer-links li {
+  margin-bottom: 10px;
+}
+
+main footer .footer-section-top .footer-links-right .footer-links li:nth-child(1) {
+  font-family: "Girlroybold";
+  color: #673ab7;
+}
+
+main footer .footer-section-top .footer-links-right .footer-links .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #7e57c2;
+}
+
+main footer .footer-section-top .footer-links-right .footer-links .social svg {
+  stroke: #673ab7 !important;
+}
+
+main footer p {
+  color: #828282;
+}
+/*# sourceMappingURL=style.css.map */
