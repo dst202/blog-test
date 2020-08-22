@@ -95,9 +95,12 @@ main {
   //hero section style
   .hero-section {
     display: flex;
-    padding: 5rem;
+    padding: 0rem 5rem 2rem 5rem;
 
     .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       font-family: "Girlroybold";
 
       h1 {
@@ -127,6 +130,11 @@ main {
       position: relative;
       // margin-left: 20%;
       justify-content: flex-end;
+      padding-top: $large;
+
+      img {
+        max-width: 100%;
+      }
 
       .first-image {
         position: relative;
@@ -443,7 +451,7 @@ main {
     .create-copy {
       display: flex;
       flex-direction: column;
-      flex: 1;
+      flex: 2;
       justify-content: center;
 
       h4 {
@@ -451,11 +459,13 @@ main {
         font-size: $large;
         color: $darkerPurple;
         margin-bottom: $small;
+        width: 90%;
       }
 
       p {
         font-family: $fontNunito;
         color: $gray;
+        width: 80%;
       }
 
       .name {
@@ -474,19 +484,21 @@ main {
     }
 
     .portfolio-photo-section {
-      display: flex;
-      flex: 1;
-      position: relative;
-      justify-content: flex-end;
+      flex: 2;
 
-      .portrait-photo {
+      img {
+        max-width: 100%;
+      }
+
+      .grid {
         position: absolute;
-        top: -20%;
-        left: 22%;
+        top: 60%;
+        right: 70%;
+      }
 
-        img {
-          border-radius: 40%;
-        }
+      .portrait {
+        transform: translateX(15%);
+        max-width: 100%;
       }
     }
   }
@@ -534,7 +546,7 @@ main {
       display: flex;
       margin-bottom: $large;
 
-      border-bottom: 1px solid $gray;
+      border-bottom: 1px solid #E1E1E1;
 
       .brand-left {
         display: flex;
