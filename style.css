@@ -479,6 +479,8 @@ main .portfolio .project-card-container .left-card {
 }
 
 main .portfolio .project-card-container .left-card .card-item-one {
+  background-image: url(/assets/images/76505.png);
+  background-size: cover;
   max-width: 100%;
   height: 320px;
   background-color: red;
