@@ -137,14 +137,12 @@ main {
     }
 
     .hero-images {
-      display: flex;
       flex: 3;
-      position: relative;
-      // margin-left: 20%;
       justify-content: flex-end;
       padding-top: $large;
 
       img {
+        float: right;
         max-width: 100%;
       }
 

@@ -160,13 +160,9 @@ main .hero-section .hero-copy .social-icons-top img {
 }
 
 main .hero-section .hero-images {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
-  position: relative;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -174,6 +170,7 @@ main .hero-section .hero-images {
 }
 
 main .hero-section .hero-images img {
+  float: right;
   max-width: 100%;
 }
 
