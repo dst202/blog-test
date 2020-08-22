@@ -74,6 +74,12 @@ nav {
           justify-content: space-between;
 }
 
+@media (max-width: 1032px) {
+  nav {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+}
+
 nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,6 +106,21 @@ main .hero-section {
   display: -ms-flexbox;
   display: flex;
   padding: 0rem 5rem 2rem 5rem;
+}
+
+@media (max-width: 1032px) {
+  main .hero-section {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main .hero-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .hero-section .hero-copy {
@@ -222,6 +243,12 @@ main .skills {
   padding: 5rem 7rem 5rem 7rem;
 }
 
+@media (max-width: 1032px) {
+  main .skills {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+}
+
 main .skills h2 {
   font-family: "Girlroybold";
   color: #828282;
@@ -237,6 +264,8 @@ main .skills .skills-images {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .skills .skills-images i {
@@ -248,6 +277,12 @@ main .skills .skills-images i {
 main .services {
   padding: 2rem 5rem 5rem 5rem;
   background: #fcfcfc;
+}
+
+@media (max-width: 1032px) {
+  main .services {
+    padding: 0rem 2rem 2rem 2rem;
+  }
 }
 
 main .services h3 {
@@ -394,6 +429,12 @@ main .portfolio {
   text-align: center;
 }
 
+@media (max-width: 1032px) {
+  main .portfolio {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+}
+
 main .portfolio img {
   max-width: 100%;
 }
@@ -415,6 +456,15 @@ main .portfolio .project-card-container {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  main .portfolio .project-card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .portfolio .project-card-container .left-card {
@@ -494,6 +544,21 @@ main .lets-create {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 1032px) {
+  main .lets-create {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main .lets-create {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 main .lets-create .create-copy {
@@ -576,6 +641,8 @@ main .contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .contact p {
@@ -602,6 +669,12 @@ main .contact a {
   border-radius: 10px;
 }
 
+@media (max-width: 820px) {
+  main .contact a {
+    margin-top: 30px;
+  }
+}
+
 main .contact a svg {
   margin-right: 10px;
 }
@@ -611,12 +684,20 @@ main footer {
   font-family: "Nunito";
 }
 
+@media (max-width: 1032px) {
+  main footer {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+}
+
 main footer .footer-section-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 3rem;
   border-bottom: 1px solid #E1E1E1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main footer .footer-section-top .brand-left {
