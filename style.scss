@@ -5,8 +5,8 @@ $darkerPurple: #673ab7;
 $gray: #828282;
 
 $small: 1rem;
+$medium: 2rem;
 $large: 3rem;
-
 
 $fontPrimary: "Girlroybold";
 $fontNunito: "Nunito";
@@ -20,7 +20,8 @@ $fontNunito: "Nunito";
 @font-face {
   font-family: "Nunito";
   src: url("CustomFont.eot");
-  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff") format("woff");
+  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff")
+    format("woff");
 }
 
 *,
@@ -67,10 +68,20 @@ li {
   }
 }
 
+h2,
+h3,
+h4 {
+  font-size: $large;
+  @media (max-width: 768px) {
+    font-size: $medium;
+  }
+}
+
 nav {
   display: flex;
   padding: 1rem 5rem 1rem 5rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (max-width: 1032px) {
     padding: 0rem 2rem 2rem 2rem;
@@ -81,6 +92,8 @@ nav {
     justify-content: center;
     align-items: center;
     font-family: "Nunito";
+    padding-left: 0;
+    flex-wrap: wrap;
 
     li {
       margin-right: 20px;
@@ -95,7 +108,6 @@ nav {
 }
 
 main {
-
   //hero section style
   .hero-section {
     display: flex;
@@ -122,7 +134,6 @@ main {
       }
 
       h2 {
-        font-size: $large;
         margin-top: 0;
         color: $primaryPurplelight;
       }
@@ -146,23 +157,6 @@ main {
         max-width: 100%;
       }
 
-      .first-image {
-        position: relative;
-        min-width: 300px;
-        height: 100%;
-        background-image: url(/assets/images/code.jpeg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 5px;
-        left: 5rem;
-
-        .dotted-svg {
-          position: absolute;
-          top: 85%;
-          left: 5%;
-        }
-      }
-
       .second-image-container {
         position: relative;
         min-width: 300px;
@@ -177,26 +171,6 @@ main {
           //   background-color: $primaryPurplelight;
           z-index: -2;
         }
-
-        .second-image {
-          position: relative;
-          min-width: 300px;
-          height: 100%;
-          background-image: url(/assets/images/coder.jpeg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          border-radius: 5px;
-          z-index: 20;
-
-          .square-svg {
-            position: absolute;
-            top: 70%;
-            left: 90%;
-            width: 50px;
-            height: 50px;
-            background-color: #f47b9e;
-          }
-        }
       }
     }
   }
@@ -209,12 +183,9 @@ main {
     flex-direction: column;
     padding: 5rem 7rem 5rem 7rem;
 
-
-
     @media (max-width: 1032px) {
       padding: 0rem 2rem 2rem 2rem;
     }
-
 
     h2 {
       font-family: "Girlroybold";
@@ -232,7 +203,7 @@ main {
       i {
         color: $gray;
         font-size: 3.5rem;
-        margin-right: 3rem;
+        margin: 2rem;
       }
     }
   }
@@ -249,7 +220,6 @@ main {
     h3 {
       text-align: center;
       color: $primaryPurplelight;
-      font-size: $large;
       font-family: "Girlroybold";
       margin-top: 0;
 
@@ -291,7 +261,6 @@ main {
       padding: 1rem;
 
       &:hover {
-
         .card {
           background-color: $darkerPurple;
 
@@ -305,7 +274,6 @@ main {
         }
 
         svg {
-
           path,
           line,
           rect,
@@ -314,7 +282,7 @@ main {
           }
 
           #Path_2 {
-            fill: #E4D9F3;
+            fill: #e4d9f3;
           }
         }
       }
@@ -346,7 +314,6 @@ main {
       svg {
         margin: 1rem;
       }
-
     }
 
     .card:hover .card__image {
@@ -383,7 +350,6 @@ main {
     }
   }
 
-
   //portfolio section
   .portfolio {
     padding: 3rem 3rem 5rem 3rem;
@@ -400,7 +366,6 @@ main {
     h4 {
       font-family: $fontPrimary;
       color: $darkerPurple;
-      font-size: $large;
       margin-bottom: $small;
       margin-top: 0;
     }
@@ -408,7 +373,6 @@ main {
     p {
       font-family: $fontNunito;
     }
-
 
     .project-card-container {
       display: flex;
@@ -424,9 +388,9 @@ main {
         flex: 1;
         margin: 1rem;
 
-
         .card-item-one {
           background-image: url(/assets/images/76505.png);
+          background-position: center center;
           background-size: cover;
           max-width: 100%;
           height: 320px;
@@ -437,6 +401,9 @@ main {
         }
 
         .card-item-two {
+          background-image: url(/assets/images/76505.png);
+          background-size: cover;
+          background-position: center center;
           max-width: 100%;
           height: 420px;
           background-color: blue;
@@ -473,7 +440,6 @@ main {
     }
   }
 
-
   ///lets create a project styles
   .lets-create {
     display: flex;
@@ -489,8 +455,6 @@ main {
       flex-direction: column;
     }
 
-
-
     .create-copy {
       display: flex;
       flex-direction: column;
@@ -499,7 +463,6 @@ main {
 
       h4 {
         font-family: $fontPrimary;
-        font-size: $large;
         color: $darkerPurple;
         margin-bottom: $small;
         width: 90%;
@@ -532,20 +495,12 @@ main {
       img {
         max-width: 100%;
       }
-
-      .grid {
-        position: absolute;
-        top: 60%;
-        right: 70%;
-      }
-
       .portrait {
         transform: translateX(15%);
         max-width: 100%;
       }
     }
   }
-
 
   //contact
   .contact {
@@ -558,9 +513,8 @@ main {
     align-items: center;
     flex-wrap: wrap;
 
-    p {
+    h4 {
       font-family: $fontPrimary;
-      font-size: $large;
       color: #fff;
       margin: 0;
     }
@@ -585,7 +539,6 @@ main {
     }
   }
 
-
   footer {
     padding: 6rem;
     font-family: $fontNunito;
@@ -598,7 +551,7 @@ main {
       display: flex;
       margin-bottom: $large;
 
-      border-bottom: 1px solid #E1E1E1;
+      border-bottom: 1px solid #e1e1e1;
       flex-wrap: wrap;
 
       .brand-left {
@@ -618,6 +571,7 @@ main {
         margin-left: auto;
         flex: 3;
         justify-content: flex-end;
+        flex-wrap: wrap;
 
         .footer-links {
           margin-right: $large;
@@ -637,7 +591,6 @@ main {
             padding: 10px;
             border-radius: 10px;
             border: 1px solid $primaryPurplelight;
-
 
             svg {
               stroke: $darkerPurple !important;
