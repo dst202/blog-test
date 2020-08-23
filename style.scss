@@ -206,6 +206,11 @@ main {
         color: $gray;
         font-size: 3.5rem;
         margin: 2rem;
+
+        @media (max-width: 450px) {
+          font-size: 3rem;
+          margin: 1rem;
+        }
       }
     }
   }
