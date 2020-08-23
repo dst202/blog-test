@@ -22,6 +22,7 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -587,6 +588,9 @@ main .lets-create .create-copy .button-container a {
 }
 
 main .lets-create .portfolio-photo-section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -600,6 +604,13 @@ main .lets-create .portfolio-photo-section .portrait {
   -webkit-transform: translateX(15%);
           transform: translateX(15%);
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  main .lets-create .portfolio-photo-section .portrait {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 main .contact {
