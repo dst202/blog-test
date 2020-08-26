@@ -267,6 +267,11 @@ main {
       display: flex;
       padding: 1rem;
 
+      @media (max-width: 640px) {
+        padding: 0;
+        margin-bottom: $medium;
+      }
+
       &:hover {
         .card {
           background-color: $darkerPurple;
@@ -396,6 +401,11 @@ main {
         flex: 1;
         margin: 1rem;
 
+        @media (max-width: 768px) {
+          margin: 0;
+          margin-bottom: $medium;
+        }
+
         .card-item-one {
           background-image: url(/assets/images/76505.png);
           background-position: center center;
@@ -406,6 +416,11 @@ main {
           margin: 1rem;
           margin-bottom: 2rem;
           border-radius: 10px;
+
+          @media (max-width: 768px) {
+            margin: 0;
+            margin-bottom: $medium;
+          }
         }
 
         .card-item-two {
@@ -417,6 +432,11 @@ main {
           background-color: blue;
           margin: 1rem;
           border-radius: 10px;
+
+          @media (max-width: 768px) {
+            margin: 0;
+            margin-bottom: $medium;
+          }
         }
       }
 
@@ -426,6 +446,11 @@ main {
         flex: 1;
         margin: 1rem;
 
+        @media (max-width: 768px) {
+          margin: 0;
+          margin-bottom: $medium;
+        }
+
         .card-item-one {
           max-width: 100%;
           height: 320px;
@@ -433,6 +458,11 @@ main {
           order: 2;
           margin: 1rem;
           border-radius: 10px;
+
+          @media (max-width: 768px) {
+            margin: 0;
+            margin-bottom: $medium;
+          }
         }
 
         .card-item-two {
@@ -443,6 +473,11 @@ main {
           margin: 1rem;
           margin-bottom: 2rem;
           border-radius: 10px;
+
+          @media (max-width: 768px) {
+            margin: 0;
+            margin-bottom: $medium;
+          }
         }
       }
     }
@@ -569,6 +604,10 @@ main {
       border-bottom: 1px solid #e1e1e1;
       flex-wrap: wrap;
 
+      @media (max-width: 440px) {
+        flex-direction: column;
+      }
+
       .brand-left {
         display: flex;
         flex: 1;
@@ -587,6 +626,16 @@ main {
         flex: 3;
         justify-content: flex-end;
         flex-wrap: wrap;
+
+
+        @media (max-width: 440px) {
+          justify-content: flex-start;
+          margin-left: 0;
+
+          ul {
+            padding-left: 0;
+          }
+        }
 
         .footer-links {
           margin-right: $large;
