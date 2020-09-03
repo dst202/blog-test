@@ -20,8 +20,7 @@ $fontNunito: "Nunito";
 @font-face {
   font-family: "Nunito";
   src: url("CustomFont.eot");
-  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff")
-    format("woff");
+  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff") format("woff");
 }
 
 *,
@@ -87,11 +86,12 @@ nav {
   flex-wrap: wrap;
 
   @media (max-width: 1032px) {
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
   }
 
   #hamburger {
     display: none;
+    position: absolute;
   }
 
   @media (max-width: 690px) {
@@ -108,6 +108,7 @@ nav {
       top: $large;
       box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
       transition: cubic-bezier(1, 0, 0, 1) 1.2s;
+
       .link-item {
         margin-bottom: 1rem;
 
@@ -125,6 +126,7 @@ nav {
       display: flex;
       position: absolute;
       right: 2rem;
+
       #hamburgerImage {
         filter: drop-shadow(0 20px 40px -14px rgba(0, 0, 0, 0.25));
       }
@@ -152,6 +154,7 @@ nav {
 }
 
 main {
+
   //hero section style
   .hero-section {
     display: flex;
@@ -328,6 +331,7 @@ main {
         }
 
         svg {
+
           path,
           line,
           rect,

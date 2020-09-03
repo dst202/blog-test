@@ -95,12 +95,13 @@ nav {
 
 @media (max-width: 1032px) {
   nav {
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
   }
 }
 
 nav #hamburger {
   display: none;
+  position: absolute;
 }
 
 @media (max-width: 690px) {
