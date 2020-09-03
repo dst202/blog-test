@@ -108,6 +108,7 @@ nav {
       top: $large;
       box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
       transition: cubic-bezier(1, 0, 0, 1) 1.2s;
+      border-radius: 10px;
 
       .link-item {
         margin-bottom: 1rem;
