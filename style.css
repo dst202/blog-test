@@ -102,6 +102,12 @@ nav {
 nav #hamburger {
   display: none;
   position: absolute;
+  z-index: 20000;
+  background: #D5C2EC;
+  border-radius: 10px;
+  padding: 5px;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 nav .nav-links {
@@ -134,7 +140,7 @@ nav .nav-links .link-item a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background: rgba(103, 58, 183, 0.27);
+    background: #D5C2EC;
     padding: 2.5rem;
     padding-left: 2rem;
     -webkit-box-pack: end;
@@ -151,6 +157,7 @@ nav .nav-links .link-item a {
     -webkit-transition: cubic-bezier(1, 0, 0, 1) 1.2s;
     transition: cubic-bezier(1, 0, 0, 1) 1.2s;
     border-radius: 10px;
+    z-index: 2000;
   }
   nav .nav-links .link-item {
     margin-bottom: 1rem;
