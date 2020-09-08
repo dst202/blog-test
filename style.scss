@@ -85,7 +85,6 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
 
-
   @media (max-width: 1032px) {
     padding: 1rem 2rem 2rem 2rem;
   }
@@ -94,7 +93,7 @@ nav {
     display: none;
     position: absolute;
     z-index: 20000;
-    background: #D5C2EC;
+    background: #d5c2ec;
     border-radius: 10px;
     padding: 3px;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -123,7 +122,7 @@ nav {
     .nav-links {
       position: absolute;
       flex-direction: column;
-      background: #D5C2EC;
+      background: #d5c2ec;
       padding: 2.5rem;
       padding-left: 2rem;
       justify-content: flex-end;
@@ -151,7 +150,7 @@ nav {
 
       .link-item-button {
         display: block;
-        margin-top: .6rem;
+        margin-top: 0.6rem;
       }
     }
 
@@ -169,8 +168,6 @@ nav {
       }
     }
   }
-
-
 }
 
 main {
@@ -620,6 +617,147 @@ main {
           transform: translateX(0);
         }
       }
+    }
+  }
+
+  //testimonial section
+  .testimonial {
+    padding: 2rem 5rem 5rem 5rem;
+    background: #fcfcfc;
+
+    @media (max-width: 1032px) {
+      padding: 0rem 2rem 2rem 2rem;
+    }
+
+    h3 {
+      text-align: center;
+      color: $primaryPurplelight;
+      font-family: "Girlroybold";
+      margin-top: 0;
+
+      span {
+        font-family: "Nunito";
+        color: #ff0068;
+        font-size: 14px;
+        background: rgba(255, 0, 104, 0.1);
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+      }
+    }
+
+    .btn {
+      background-color: white;
+      border: 1px solid #cccccc;
+      color: #696969;
+      padding: 0.5rem;
+      text-transform: lowercase;
+    }
+
+    .btn--block {
+      display: block;
+      width: 100%;
+    }
+
+    .cards {
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cards__item {
+      display: -webkit-box;
+      display: flex;
+      padding-left: 0;
+      letter-spacing: 0.3px;
+      padding: 1rem;
+
+      @media (max-width: 640px) {
+        padding: 0;
+        margin-bottom: $medium;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      .cards__item {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 56rem) {
+      .cards__item {
+        width: 33%;
+      }
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      overflow: hidden;
+
+      svg {
+        margin: 1rem;
+      }
+    }
+
+    .card:hover .card__image {
+      -webkit-filter: contrast(100%);
+      filter: contrast(100%);
+    }
+
+    .card__content {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-flex: 1;
+      flex: 1 1 auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      padding: 2rem;
+      justify-content: space-around;
+    }
+
+    .card__title {
+      display: flex;
+      font-family: $fontPrimary;
+      color: $darkerPurple;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+      }
+
+      div {
+        margin-left: $small;
+
+        h5 {
+          font-size: 1.1rem;
+          margin: 0;
+        }
+
+        p {
+          margin: 0px;
+          font-size: 0.8rem;
+          color: #000;
+          font-family: $fontNunito;
+        }
+      }
+    }
+
+    .card__text {
+      font-family: $fontNunito;
+      color: $gray;
+      -webkit-box-flex: 1;
+      font-size: 1rem;
+      margin-top: $medium;
     }
   }
 
