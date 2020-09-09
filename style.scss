@@ -36,6 +36,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   transition: all 2s;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -637,9 +638,9 @@ main {
 
       span {
         font-family: "Nunito";
-        color: #ff0068;
+        color: #3751FF;
         font-size: 14px;
-        background: rgba(255, 0, 104, 0.1);
+        background: rgba(55, 81, 255, 0.1);
         padding: 5px 10px 5px 10px;
         border-radius: 5px;
       }
@@ -757,7 +758,7 @@ main {
       color: $gray;
       -webkit-box-flex: 1;
       font-size: 1rem;
-      margin-top: $medium;
+      margin-top: $medium
     }
   }
 
@@ -847,6 +848,11 @@ main {
 
         .footer-links {
           margin-right: $large;
+
+          a {
+            text-decoration: none;
+            color: #000;
+          }
 
           li {
             margin-bottom: 10px;

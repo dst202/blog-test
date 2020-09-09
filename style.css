@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
   -webkit-transition: all 2s;
   transition: all 2s;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -764,9 +765,9 @@ main .testimonial h3 {
 
 main .testimonial h3 span {
   font-family: "Nunito";
-  color: #ff0068;
+  color: #3751FF;
   font-size: 14px;
-  background: rgba(255, 0, 104, 0.1);
+  background: rgba(55, 81, 255, 0.1);
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
 }
@@ -1033,6 +1034,11 @@ main footer .footer-section-top .footer-links-right {
 
 main footer .footer-section-top .footer-links-right .footer-links {
   margin-right: 3rem;
+}
+
+main footer .footer-section-top .footer-links-right .footer-links a {
+  text-decoration: none;
+  color: #000;
 }
 
 main footer .footer-section-top .footer-links-right .footer-links li {
