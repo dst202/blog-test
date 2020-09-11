@@ -442,6 +442,12 @@ main .services .card svg {
   margin: 1rem;
 }
 
+main .services .card .ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 main .services .card:hover .card__image {
   -webkit-filter: contrast(100%);
   filter: contrast(100%);

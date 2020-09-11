@@ -384,6 +384,10 @@ main {
       svg {
         margin: 1rem;
       }
+
+      .ratings {
+        display: flex;
+      }
     }
 
     .card:hover .card__image {
