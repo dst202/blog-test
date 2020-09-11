@@ -1,7 +1,7 @@
 //nav bar styling
 
-$primaryPurplelight: #7e57c2;
-$darkerPurple: #673ab7;
+$primaryPurplelight: hsl(262, 47%, 55%);
+$darkerPurple: hsl(262, 52%, 47%);
 $gray: #828282;
 
 $small: 1rem;
@@ -92,12 +92,6 @@ nav {
 
   #hamburger {
     display: none;
-    position: absolute;
-    z-index: 20000;
-    background: #d5c2ec;
-    border-radius: 10px;
-    padding: 3px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   }
 
   .nav-links {
@@ -140,7 +134,7 @@ nav {
         margin-bottom: 1rem;
         margin-right: 0;
 
-        a {
+        &:nth-last-child() a {
           color: $darkerPurple;
         }
       }
@@ -470,7 +464,7 @@ main {
         }
 
         .card-item-one {
-          background-image: url(/assets/images/easybank.png);
+          background-image: url(/assets/images/liferithms.png);
           background-position: center center;
           background-size: cover;
           max-width: 100%;
@@ -638,7 +632,7 @@ main {
 
       span {
         font-family: "Nunito";
-        color: #3751FF;
+        color: #3751ff;
         font-size: 14px;
         background: rgba(55, 81, 255, 0.1);
         padding: 5px 10px 5px 10px;
@@ -732,6 +726,15 @@ main {
       color: $darkerPurple;
       align-items: center;
 
+      .testimonial-image {
+        width: 60px;
+        height: 60px;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
       img {
         border-radius: 50%;
       }
@@ -739,7 +742,7 @@ main {
       div {
         margin-left: $small;
 
-        h5 {
+        h4 {
           font-size: 1.1rem;
           margin: 0;
         }
@@ -758,7 +761,7 @@ main {
       color: $gray;
       -webkit-box-flex: 1;
       font-size: 1rem;
-      margin-top: $medium
+      margin-top: $medium;
     }
   }
 

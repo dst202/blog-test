@@ -36,7 +36,7 @@ a {
   padding: 10px 25px 10px 25px;
   color: #fff;
   border-radius: 5px;
-  background: #673ab7;
+  background: #673ab6;
   font-family: "Nunito";
 }
 
@@ -49,7 +49,7 @@ li {
   display: -ms-flexbox;
   display: flex;
   font-size: 2rem;
-  color: #7e57c2;
+  color: #7e56c2;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -102,13 +102,6 @@ nav {
 
 nav #hamburger {
   display: none;
-  position: absolute;
-  z-index: 20000;
-  background: #d5c2ec;
-  border-radius: 10px;
-  padding: 3px;
-  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 nav .nav-links {
@@ -164,8 +157,8 @@ nav .nav-links .link-item a {
     margin-bottom: 1rem;
     margin-right: 0;
   }
-  nav .nav-links .link-item a {
-    color: #673ab7;
+  nav .nav-links .link-item:nth-last-child() a {
+    color: #673ab6;
   }
   nav .nav-links .link-item- {
     margin-right: 0;
@@ -235,7 +228,7 @@ main .hero-section .hero-copy h1 {
 
 main .hero-section .hero-copy h2 {
   margin-top: 0;
-  color: #7e57c2;
+  color: #7e56c2;
 }
 
 main .hero-section .hero-copy .social-icons-top {
@@ -343,7 +336,7 @@ main .services {
 
 main .services h3 {
   text-align: center;
-  color: #7e57c2;
+  color: #7e56c2;
   font-family: "Girlroybold";
   margin-top: 0;
 }
@@ -396,7 +389,7 @@ main .services .cards__item {
 }
 
 main .services .cards__item:hover .card {
-  background-color: #673ab7;
+  background-color: #673ab6;
 }
 
 main .services .cards__item:hover .card .card__text {
@@ -470,14 +463,14 @@ main .services .card__content {
 
 main .services .card__title {
   font-family: "Girlroybold";
-  color: #673ab7;
+  color: #673ab6;
   font-size: 1.25rem;
   font-weight: 300;
 }
 
 main .services .card__text {
   font-family: "Nunito";
-  color: #673ab7;
+  color: #673ab6;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
@@ -503,7 +496,7 @@ main .portfolio img {
 
 main .portfolio h4 {
   font-family: "Girlroybold";
-  color: #673ab7;
+  color: #673ab6;
   margin-bottom: 1rem;
   margin-top: 0;
 }
@@ -550,7 +543,7 @@ main .portfolio .project-card-container .left-card {
 }
 
 main .portfolio .project-card-container .left-card .card-item-one {
-  background-image: url(/assets/images/easybank.png);
+  background-image: url(/assets/images/liferithms.png);
   background-position: center center;
   background-size: cover;
   max-width: 100%;
@@ -694,7 +687,7 @@ main .lets-create .create-copy {
 
 main .lets-create .create-copy h4 {
   font-family: "Girlroybold";
-  color: #673ab7;
+  color: #673ab6;
   margin-bottom: 1rem;
   width: 90%;
 }
@@ -758,14 +751,14 @@ main .testimonial {
 
 main .testimonial h3 {
   text-align: center;
-  color: #7e57c2;
+  color: #7e56c2;
   font-family: "Girlroybold";
   margin-top: 0;
 }
 
 main .testimonial h3 span {
   font-family: "Nunito";
-  color: #3751FF;
+  color: #3751ff;
   font-size: 14px;
   background: rgba(55, 81, 255, 0.1);
   padding: 5px 10px 5px 10px;
@@ -869,10 +862,19 @@ main .testimonial .card__title {
   display: -ms-flexbox;
   display: flex;
   font-family: "Girlroybold";
-  color: #673ab7;
+  color: #673ab6;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .testimonial .card__title .testimonial-image {
+  width: 60px;
+  height: 60px;
+}
+
+main .testimonial .card__title .testimonial-image img {
+  max-width: 100%;
 }
 
 main .testimonial .card__title img {
@@ -883,7 +885,7 @@ main .testimonial .card__title div {
   margin-left: 1rem;
 }
 
-main .testimonial .card__title div h5 {
+main .testimonial .card__title div h4 {
   font-size: 1.1rem;
   margin: 0;
 }
@@ -909,7 +911,7 @@ main .contact {
   display: flex;
   margin: 5rem 3rem 0 3rem;
   padding: 4rem;
-  background: #673ab7;
+  background: #673ab6;
   border-radius: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -933,7 +935,7 @@ main .contact a {
   display: flex;
   padding: 15px 35px 15px 35px;
   background: #fff;
-  color: #673ab7;
+  color: #673ab6;
   font-family: "Nunito";
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1047,7 +1049,7 @@ main footer .footer-section-top .footer-links-right .footer-links li {
 
 main footer .footer-section-top .footer-links-right .footer-links li:nth-child(1) {
   font-family: "Girlroybold";
-  color: #673ab7;
+  color: #673ab6;
 }
 
 main footer .footer-section-top .footer-links-right .footer-links .social {
@@ -1058,11 +1060,11 @@ main footer .footer-section-top .footer-links-right .footer-links .social {
       justify-content: space-around;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #7e57c2;
+  border: 1px solid #7e56c2;
 }
 
 main footer .footer-section-top .footer-links-right .footer-links .social svg {
-  stroke: #673ab7 !important;
+  stroke: #673ab6 !important;
 }
 
 main footer p {
