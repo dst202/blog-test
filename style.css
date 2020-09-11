@@ -704,6 +704,12 @@ main .lets-create .create-copy p {
   width: 80%;
 }
 
+@media (max-width: 768px) {
+  main .lets-create .create-copy p {
+    width: 100%;
+  }
+}
+
 main .lets-create .create-copy .name {
   color: #000;
   margin-bottom: 1rem;

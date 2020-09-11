@@ -582,6 +582,10 @@ main {
         font-family: $fontNunito;
         color: $gray;
         width: 80%;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
 
       .name {
