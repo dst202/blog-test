@@ -571,6 +571,8 @@ main .portfolio .project-card-container .left-card .card-item-one {
   margin: 1rem;
   margin-bottom: 1rem;
   border-radius: 10px;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -588,6 +590,8 @@ main .portfolio .project-card-container .left-card .card-item-two {
   height: 420px;
   margin: 1rem;
   border-radius: 10px;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -629,6 +633,8 @@ main .portfolio .project-card-container .right-card .card-item-one {
           order: 2;
   margin: 1rem;
   border-radius: 10px;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -650,6 +656,8 @@ main .portfolio .project-card-container .right-card .card-item-two {
   margin: 1rem;
   margin-bottom: 1rem;
   border-radius: 10px;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
