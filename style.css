@@ -563,14 +563,14 @@ main .portfolio .project-card-container .left-card {
 }
 
 main .portfolio .project-card-container .left-card .card-item-one {
-  background-image: url(/assets/images/liferithms.png);
+  background-image: url(/assets/images/easybank.png);
   background-position: center center;
   background-size: cover;
   max-width: 100%;
   height: 320px;
   background-color: red;
   margin: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 10px;
 }
 
@@ -652,7 +652,7 @@ main .portfolio .project-card-container .right-card .card-item-two {
       -ms-flex-order: 1;
           order: 1;
   margin: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: 10px;
 }
 
@@ -661,6 +661,41 @@ main .portfolio .project-card-container .right-card .card-item-two {
     margin: 0;
     margin-bottom: 2rem;
   }
+}
+
+main .portfolio .project-card-container .one-card-container {
+  text-align: left;
+}
+
+main .portfolio .project-card-container .one-card-container .card-info {
+  margin-left: 20px;
+  color: #828282;
+  font-family: "Nunito";
+}
+
+main .portfolio .project-card-container .one-card-container .card-info h5 {
+  font-family: "Girlroybold";
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  color: #7e56c2;
+}
+
+main .portfolio .project-card-container .one-card-container .card-info p {
+  margin-top: 0px;
+}
+
+main .portfolio .project-card-container .one-card-container .card-info .tags {
+  font-family: "Girlroybold";
+  font-weight: 300;
+}
+
+main .portfolio .project-card-container .one-card-container .project-links {
+  margin-top: 10px;
+}
+
+main .portfolio .project-card-container .one-card-container .project-links a img {
+  margin-right: 10px;
 }
 
 main .lets-create {
