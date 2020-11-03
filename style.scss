@@ -971,12 +971,7 @@ footer {
 
 ///projects page
 
-$primaryWhite: hsl(0, 0%, 100%);
 $veryLightGray: hsl(0, 0%, 98%);
-$LimeGreen: hsl(136, 65%, 51%);
-$DarkBlue: hsl(233, 26%, 24%);
-$BrightCyan: hsl(192, 70%, 51%);
-$GrayishBlue: hsl(233, 8%, 62%);
 $LightGrayishBlue: hsl(220, 16%, 96%);
 
 $fontFam: "Open Sans";
@@ -1036,6 +1031,16 @@ $breakpoint-tablet: 640px;
         padding: 0;
         margin-bottom: 40px;
       }
+
+      &:hover {
+        .card {
+          transform: scale(1.04);
+        }
+
+        .article-caption {
+          transform: scale(1.04);
+        }
+      }
     }
 
     @media (min-width: 40rem) {
@@ -1051,6 +1056,7 @@ $breakpoint-tablet: 640px;
     }
 
     .card {
+      transition: all 1s ease-out;
       // background-color: $primaryWhite;
       z-index: 1;
     }
@@ -1062,6 +1068,7 @@ $breakpoint-tablet: 640px;
     }
 
     .article-caption {
+      transition: all 1s ease-in-out;
       padding: 0.5rem 1.5rem;
       background-color: $veryLightGray;
       width: 105%;
