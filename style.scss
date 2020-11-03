@@ -20,7 +20,8 @@ $fontNunito: "Nunito";
 @font-face {
   font-family: "Nunito";
   src: url("CustomFont.eot");
-  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff") format("woff");
+  src: url("/assets/images/fonts/nunitosans-regular-webfont.woff")
+    format("woff");
 }
 
 *,
@@ -166,7 +167,6 @@ nav {
 }
 
 main {
-
   //hero section style
   .hero-section {
     display: flex;
@@ -351,7 +351,6 @@ main {
         }
 
         svg {
-
           path,
           line,
           rect,
@@ -859,89 +858,89 @@ main {
       }
     }
   }
+}
 
-  footer {
-    padding: 6rem;
-    font-family: $fontNunito;
+footer {
+  padding: 6rem;
+  font-family: $fontNunito;
 
-    @media (max-width: 1032px) {
-      padding: 6rem 2rem 2rem 2rem;
+  @media (max-width: 1032px) {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  .footer-section-top {
+    display: flex;
+    margin-bottom: $large;
+
+    border-bottom: 1px solid #e1e1e1;
+    flex-wrap: wrap;
+
+    @media (max-width: 440px) {
+      flex-direction: column;
     }
 
-    .footer-section-top {
+    .brand-left {
       display: flex;
-      margin-bottom: $large;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
 
-      border-bottom: 1px solid #e1e1e1;
+      p {
+        font-family: $fontNunito;
+        color: $gray;
+      }
+    }
+
+    .footer-links-right {
+      display: flex;
+      margin-left: auto;
+      flex: 3;
+      justify-content: flex-end;
       flex-wrap: wrap;
 
       @media (max-width: 440px) {
-        flex-direction: column;
-      }
+        justify-content: flex-start;
+        margin-left: 0;
 
-      .brand-left {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: flex-start;
-
-        p {
-          font-family: $fontNunito;
-          color: $gray;
+        ul {
+          padding-left: 0;
         }
       }
 
-      .footer-links-right {
-        display: flex;
-        margin-left: auto;
-        flex: 3;
-        justify-content: flex-end;
-        flex-wrap: wrap;
+      .footer-links {
+        margin-right: $large;
 
-        @media (max-width: 440px) {
-          justify-content: flex-start;
-          margin-left: 0;
+        a {
+          text-decoration: none;
+          color: #000;
+        }
 
-          ul {
-            padding-left: 0;
+        li {
+          margin-bottom: 10px;
+
+          &:nth-child(1) {
+            font-family: $fontPrimary;
+            color: $darkerPurple;
           }
         }
 
-        .footer-links {
-          margin-right: $large;
+        .social {
+          display: flex;
+          justify-content: space-around;
+          padding: 10px;
+          border-radius: 10px;
+          border: 1px solid $primaryPurplelight;
 
-          a {
-            text-decoration: none;
-            color: #000;
-          }
-
-          li {
-            margin-bottom: 10px;
-
-            &:nth-child(1) {
-              font-family: $fontPrimary;
-              color: $darkerPurple;
-            }
-          }
-
-          .social {
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-            border-radius: 10px;
-            border: 1px solid $primaryPurplelight;
-
-            svg {
-              stroke: $darkerPurple !important;
-            }
+          svg {
+            stroke: $darkerPurple !important;
           }
         }
       }
     }
+  }
 
-    p {
-      color: $gray;
-    }
+  p {
+    color: $gray;
   }
 }
 
@@ -967,5 +966,132 @@ main {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+///projects page
+
+$primaryWhite: hsl(0, 0%, 100%);
+$veryLightGray: hsl(0, 0%, 98%);
+$LimeGreen: hsl(136, 65%, 51%);
+$DarkBlue: hsl(233, 26%, 24%);
+$BrightCyan: hsl(192, 70%, 51%);
+$GrayishBlue: hsl(233, 8%, 62%);
+$LightGrayishBlue: hsl(220, 16%, 96%);
+
+$fontFam: "Open Sans";
+$bodyCopy: 18px;
+
+$breakpoint-tablet: 640px;
+.main-container {
+  h1 {
+    color: #aaa9a9;
+    font-size: $large;
+    text-align: center;
+    font-family: $fontPrimary;
+    span {
+      color: rgb(89, 89, 89);
+    }
+  }
+
+  h2 {
+    font-size: $small;
+    font-family: $fontNunito;
+    text-align: center;
+    color: #aaa9a9;
+  }
+
+  h3 {
+    color: $darkerPurple;
+    font-family: $fontFam;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .articles {
+    padding: 50px 60px 100px 60px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      h1 {
+        text-align: center;
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cards_item {
+      display: flex;
+      padding: 1rem;
+      flex-direction: column;
+      align-items: center;
+
+      @media (max-width: $breakpoint-tablet) {
+        padding: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (min-width: 40rem) {
+      .cards_item {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 56rem) {
+      .cards_item {
+        width: 33.33%;
+      }
+    }
+
+    .card {
+      // background-color: $primaryWhite;
+      z-index: 1;
+    }
+
+    .content-image {
+      max-width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    }
+
+    .article-caption {
+      padding: 0.5rem 1.5rem;
+      background-color: $veryLightGray;
+      width: 105%;
+      margin-top: -5%;
+      z-index: 0;
+      border-radius: 5px;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+
+      .project-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      a {
+        color: $gray;
+        font-size: 1rem;
+        font-family: $fontPrimary;
+      }
+
+      p {
+        color: $gray;
+        font-family: $fontNunito;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .articles {
+      padding: 30px 30px;
+    }
   }
 }

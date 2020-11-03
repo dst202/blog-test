@@ -1027,18 +1027,18 @@ main .contact a svg {
   margin-right: 10px;
 }
 
-main footer {
+footer {
   padding: 6rem;
   font-family: "Nunito";
 }
 
 @media (max-width: 1032px) {
-  main footer {
+  footer {
     padding: 6rem 2rem 2rem 2rem;
   }
 }
 
-main footer .footer-section-top {
+footer .footer-section-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1049,7 +1049,7 @@ main footer .footer-section-top {
 }
 
 @media (max-width: 440px) {
-  main footer .footer-section-top {
+  footer .footer-section-top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1057,7 +1057,7 @@ main footer .footer-section-top {
   }
 }
 
-main footer .footer-section-top .brand-left {
+footer .footer-section-top .brand-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1073,12 +1073,12 @@ main footer .footer-section-top .brand-left {
           align-items: flex-start;
 }
 
-main footer .footer-section-top .brand-left p {
+footer .footer-section-top .brand-left p {
   font-family: "Nunito";
   color: #828282;
 }
 
-main footer .footer-section-top .footer-links-right {
+footer .footer-section-top .footer-links-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1094,36 +1094,36 @@ main footer .footer-section-top .footer-links-right {
 }
 
 @media (max-width: 440px) {
-  main footer .footer-section-top .footer-links-right {
+  footer .footer-section-top .footer-links-right {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-left: 0;
   }
-  main footer .footer-section-top .footer-links-right ul {
+  footer .footer-section-top .footer-links-right ul {
     padding-left: 0;
   }
 }
 
-main footer .footer-section-top .footer-links-right .footer-links {
+footer .footer-section-top .footer-links-right .footer-links {
   margin-right: 3rem;
 }
 
-main footer .footer-section-top .footer-links-right .footer-links a {
+footer .footer-section-top .footer-links-right .footer-links a {
   text-decoration: none;
   color: #000;
 }
 
-main footer .footer-section-top .footer-links-right .footer-links li {
+footer .footer-section-top .footer-links-right .footer-links li {
   margin-bottom: 10px;
 }
 
-main footer .footer-section-top .footer-links-right .footer-links li:nth-child(1) {
+footer .footer-section-top .footer-links-right .footer-links li:nth-child(1) {
   font-family: "Girlroybold";
   color: #673ab6;
 }
 
-main footer .footer-section-top .footer-links-right .footer-links .social {
+footer .footer-section-top .footer-links-right .footer-links .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1134,11 +1134,11 @@ main footer .footer-section-top .footer-links-right .footer-links .social {
   border: 1px solid #7e56c2;
 }
 
-main footer .footer-section-top .footer-links-right .footer-links .social svg {
+footer .footer-section-top .footer-links-right .footer-links .social svg {
   stroke: #673ab6 !important;
 }
 
-main footer p {
+footer p {
   color: #828282;
 }
 
@@ -1191,6 +1191,137 @@ main footer p {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+.main-container h1 {
+  color: #aaa9a9;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Girlroybold";
+}
+
+.main-container h1 span {
+  color: #595959;
+}
+
+.main-container h2 {
+  font-size: 1rem;
+  font-family: "Nunito";
+  text-align: center;
+  color: #aaa9a9;
+}
+
+.main-container h3 {
+  color: #673ab6;
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.main-container .articles {
+  padding: 50px 60px 100px 60px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .main-container .articles h1 {
+    text-align: center;
+  }
+}
+
+.main-container .articles .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container .articles .cards_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 640px) {
+  .main-container .articles .cards_item {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 40rem) {
+  .main-container .articles .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .main-container .articles .cards_item {
+    width: 33.33%;
+  }
+}
+
+.main-container .articles .card {
+  z-index: 1;
+}
+
+.main-container .articles .content-image {
+  max-width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.main-container .articles .article-caption {
+  padding: 0.5rem 1.5rem;
+  background-color: #fafafa;
+  width: 105%;
+  margin-top: -5%;
+  z-index: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.main-container .articles .article-caption .project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .articles .article-caption a {
+  color: #828282;
+  font-size: 1rem;
+  font-family: "Girlroybold";
+}
+
+.main-container .articles .article-caption p {
+  color: #828282;
+  font-family: "Nunito";
+}
+
+@media (max-width: 640px) {
+  .main-container .articles {
+    padding: 30px 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
