@@ -12,12 +12,14 @@ $fontPrimary: "Girlroybold";
 $fontNunito: "Nunito";
 
 @font-face {
+  font-display: swap;
   font-family: "Girlroybold";
   src: url("CustomFont.eot");
   src: url("/assets/images/fonts/gilroy-bold-webfont.woff") format("woff");
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Nunito";
   src: url("CustomFont.eot");
   src: url("/assets/images/fonts/nunitosans-regular-webfont.woff")
