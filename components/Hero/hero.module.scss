@@ -1,0 +1,114 @@
+@import "../../styles/variables.scss";
+
+//hero section style
+.hero_section {
+  display: flex;
+  padding: 0rem 5rem 2rem 5rem;
+
+  @media (max-width: 1032px) {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .hero_copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $fontPrimary;
+
+    .my_name {
+      font-size: $small;
+      color: $gray;
+      margin-bottom: 0;
+      opacity: 0;
+      animation: HeroH1Animation;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    .smaller {
+      margin-top: 0;
+      color: $primaryPurplelight;
+      opacity: 0;
+      animation: HeroH2Animation;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    }
+
+    .social_icons_top {
+      display: flex;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .hero_images {
+    flex: 3;
+    justify-content: flex-end;
+    padding-top: $large;
+
+    img {
+      float: right;
+      max-width: 100%;
+    }
+
+    .second_image_container {
+      position: relative;
+      min-width: 300px;
+      height: 100%;
+      left: -3rem;
+      top: 20%;
+
+      .rounded_object {
+        position: absolute;
+        left: 75%;
+        top: -20%;
+        //   background-color: $primaryPurplelight;
+        z-index: -2;
+      }
+    }
+  }
+}
+
+//skills style
+.skills {
+  background: #fcfcfc;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 5rem 7rem 5rem 7rem;
+
+  @media (max-width: 1032px) {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+
+  .skills_header {
+    font-family: $fontPrimary;
+    color: $gray;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 2.5rem;
+  }
+
+  .skills_images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .svgSkills {
+      color: $gray;
+      font-size: 3.5rem;
+      margin: 2rem;
+
+      @media (max-width: 450px) {
+        font-size: 3rem;
+        margin: 1rem;
+      }
+    }
+  }
+}

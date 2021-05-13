@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600;700;800;900&family=Nunito:wght@200;300;400&display=swap");
+
+$primaryPurplelight: hsl(262, 47%, 55%);
+$darkerPurple: hsl(262, 52%, 47%);
+$gray: #828282;
+
+$small: 1rem;
+$medium: 2rem;
+$large: 3rem;
+
+$fontPrimary: "MuseoModerno";
+$fontNunito: "Nunito";
+
+$veryLightGray: hsl(0, 0%, 98%);
+$LightGrayishBlue: hsl(220, 16%, 96%);
+
+$fontFam: "Open Sans";
+$bodyCopy: 18px;
+
+$breakpoint-tablet: 640px;
+
+//animation
+@keyframes HeroH1Animation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes HeroH2Animation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,95 @@
+@import "../../styles/variables.scss";
+
+.nav {
+  display: flex;
+  padding: 1rem 5rem 1rem 5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1032px) {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .nav_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito";
+    // padding-left: 0;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 20px;
+    }
+
+    .link_item {
+      a {
+        color: $gray;
+      }
+    }
+  }
+
+  @media (max-width: 690px) {
+    .nav_links {
+      position: absolute;
+      flex-direction: column;
+      background: #d5c2ec;
+      padding: 2.5rem;
+      padding-left: 2rem;
+      justify-content: flex-end;
+      align-content: flex-end;
+      right: 2rem;
+      transform: translateY(-200%);
+      top: $large;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+      transition: cubic-bezier(1, 0, 0, 1) 1.2s;
+      border-radius: 10px;
+      z-index: 2000;
+
+      .link_item {
+        margin-bottom: 1rem;
+        margin-right: 0;
+
+        &:nth-last-child(1) a {
+          color: $darkerPurple;
+        }
+      }
+
+      .link_item_ {
+        margin-right: 0;
+      }
+
+      .link_item_button {
+        display: block;
+        margin-top: 0.6rem;
+      }
+    }
+
+    .nav_active {
+      transform: translateY(0%);
+    }
+
+    #hamburger {
+      display: flex;
+      position: absolute;
+      right: 2rem;
+
+      #hamburgerImage {
+        filter: drop-shadow(0 20px 40px -14px rgba(0, 0, 0, 0.25));
+      }
+    }
+  }
+}
+
+.brand {
+  display: flex;
+  font-size: 2rem;
+  color: $primaryPurplelight;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
