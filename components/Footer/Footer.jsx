@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer class="footer-section">
-      <div class="footer-section-top">
-        <div class="brand-left">
-          <a href="/" class="brand">
+    <footer className="footer-section">
+      <div className="footer-section-top">
+        <div className="brand-left">
+          <a href="/" className="brand">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 404.86 131.55"
@@ -90,32 +90,32 @@ const Footer = () => {
           </p>
         </div>
 
-        <div class="footer-links-right">
-          <ul class="footer-links">
-            <li class="link-item">Menu</li>
-            <li class="link-item">
+        <div className="footer-links-right">
+          <ul className="footer-links">
+            <li className="link-item">Menu</li>
+            <li className="link-item">
               <a href="/#about">About Me</a>
             </li>
-            <li class="link-item">
+            <li className="link-item">
               <a href="/projects">My Projects</a>
             </li>
-            <li class="link-item">
+            <li className="link-item">
               <a href="/#services">Services</a>
             </li>
-            <li class="link-item">
+            <li className="link-item">
               <a href="mailto:omanchis@gmail.com">Contact</a>
             </li>
           </ul>
 
-          <ul class="footer-links">
-            <li class="link-item">Get in touch</li>
-            <li class="link-item">
+          <ul className="footer-links">
+            <li className="link-item">Get in touch</li>
+            <li className="link-item">
               <a href="tel:+4917661932303">+49 1766 1932303</a>
             </li>
-            <li class="link-item">
+            <li className="link-item">
               <a href="mailto:omanchis@gmail.com">omanchis@gmail.com</a>
             </li>
-            <li class="link-item social">
+            <li className="link-item social">
               <a href="https://twitter.com/cortehzz" target="_blanck">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +165,7 @@ const Footer = () => {
                       fill="none"
                       stroke="#673ab7"
                       strokeLinecap="round"
-                      strokeWinejoin="round"
+                      strokeLinejoin="round"
                       strokeWidth="1"
                     />
                     <rect

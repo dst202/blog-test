@@ -1,15 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
-import Header from "./Header/Header";
 
 const name = "Samuel Omanchi";
 export const siteTitle =
-  "Nigerian front end developer based in Bremen, Germany. Writing about HTML, CSS, JavaScript, React and React Native.";
+  "Front end developer based in Bremen, Germany. Writing about HTML, CSS, JavaScript, React and React Native.";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>

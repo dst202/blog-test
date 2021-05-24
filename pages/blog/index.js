@@ -5,6 +5,7 @@ import { getSortedPostsData } from "../../lib/posts";
 import Header from "../../components/Header/Header";
 import Link from "next/link";
 import Footer from "../../components/Footer/Footer";
+import React from "react";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -30,8 +31,8 @@ export default function Home({ allPostsData }) {
           </h1>{" "}
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title, description }) => (
-              <>
-                <li className={utilStyles.listItem} key={id}>
+              <React.Fragment key={title}>
+                <li className={utilStyles.listItem}>
                   <span>10 mins read</span>
                   <br />
                   <small className={utilStyles.lightText}>
@@ -73,7 +74,7 @@ export default function Home({ allPostsData }) {
                 </li>
                 <br />
                 <br />
-              </>
+              </React.Fragment>
             ))}
           </ul>
         </section>

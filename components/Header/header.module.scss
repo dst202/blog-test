@@ -10,7 +10,7 @@
     padding: 1rem 2rem 2rem 2rem;
   }
 
-  #hamburger {
+  .hamburger {
     display: none;
   }
 
@@ -46,7 +46,7 @@
       transform: translateY(-200%);
       top: $large;
       box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-      transition: cubic-bezier(1, 0, 0, 1) 1.2s;
+      transition: ease-in-out 0.3s;
       border-radius: 10px;
       z-index: 2000;
 
@@ -73,7 +73,7 @@
       transform: translateY(0%);
     }
 
-    #hamburger {
+    .hamburger {
       display: flex;
       position: absolute;
       right: 2rem;

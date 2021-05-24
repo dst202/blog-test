@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section class="contact" id="contact">
+    <section className="contact" id="contact">
       <h4>
         Ready to create <br />
         your next project?
@@ -18,9 +18,9 @@ const Contact = () => {
             transform="translate(-2 -2)"
             fill="none"
             stroke="#7e57c2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
         </svg>
         Get in touch

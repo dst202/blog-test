@@ -1,8 +1,29 @@
-import Image from "next/image";
 import headerStyles from "./header.module.scss";
+import { useState } from "react";
 import Link from "next/link";
 
-const Header = () => {
+const Header = (home) => {
+  const [navOpen, setnavOpen] = useState(false);
+
+  const links = [
+    {
+      link: "/#about",
+      linkDescription: "About me",
+    },
+    {
+      link: "/#services",
+      linkDescription: "Services",
+    },
+    {
+      link: "/projects",
+      linkDescription: "My projects",
+    },
+    {
+      link: "/blog",
+      linkDescription: "Blog",
+    },
+  ];
+
   return (
     <nav className={headerStyles.nav}>
       <Link href="/">
@@ -89,40 +110,71 @@ const Header = () => {
         </a>
       </Link>
 
-      <ul className={headerStyles.nav_links}>
-        <li className={headerStyles.link_item}>
-          <Link href="/#about">
-            <a>About me</a>
-          </Link>
-        </li>
-        <li className={headerStyles.link_item}>
-          <Link href="#services">
-            <a>Services</a>
-          </Link>
-        </li>
-        <li className={headerStyles.link_item}>
-          <Link href="/projects">
-            <a>My Projects</a>
-          </Link>
-        </li>
-        <li className={headerStyles.link_item}>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </li>
-        <li className={headerStyles.link_item_}>
+      <ul
+        className={`${headerStyles.nav_links}  ${
+          navOpen ? headerStyles.nav_active : ""
+        }`}
+      >
+        {links.map(({ link, linkDescription }) => {
+          return (
+            <li
+              key={link}
+              className={headerStyles.link_item}
+              onClick={() => setnavOpen(false)}
+            >
+              <Link href={link}>
+                <a>{linkDescription}</a>
+              </Link>
+            </li>
+          );
+        })}
+        <li
+          className={headerStyles.link_item_}
+          onClick={() => setnavOpen(false)}
+        >
           <a className="link-item-button" href="mailto:omanchis@gmail.com">
             Contact
           </a>
         </li>
       </ul>
-      {/* <a href="#menu" id="hamburger">
-        <img
-          src="/assets/images/open.svg"
-          alt="menu button"
-          id="hamburgerImage"
-        />
-      </a> */}
+
+      <a
+        href="#menu"
+        onClick={() => setnavOpen(!navOpen)}
+        className={headerStyles.hamburger}
+      >
+        {!navOpen ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 20 20"
+            fill="#673ab7"
+            className="menu-alt3 w-6 h-6"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 20 20"
+            fill="#673ab7"
+            className="x w-6 h-6"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        )}
+      </a>
     </nav>
   );
 };

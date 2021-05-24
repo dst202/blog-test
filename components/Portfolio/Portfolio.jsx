@@ -1,6 +1,6 @@
 const Portfolio = () => {
   return (
-    <section className="portfolio" id="project">
+    <section className="portfolio" id="projects">
       <h4>Featured Projects</h4>
       <p>
         Here are some of the selected projects I have been involved in on over

@@ -12,6 +12,7 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
+import React from "react";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -28,12 +29,12 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>{" "}
-      <Header />
+      <Header home={true} />
       <main>
         <Hero />
         <Services />{" "}
         <Layout home>
-          <section className="blog">
+          <section className="blog" id="blog">
             <h3>
               <span>Blog</span>
               <br />I write every now and then
@@ -41,9 +42,9 @@ export default function Home({ allPostsData }) {
 
             <ul className={utilStyles.list}>
               {allPostsData.map(({ id, date, title, description }) => (
-                <>
+                <React.Fragment key={id}>
                   {" "}
-                  <li className={utilStyles.listItem} key={id}>
+                  <li className={utilStyles.listItem}>
                     <span>10 mins read</span>
                     <br />
                     <small className={utilStyles.lightText}>
@@ -84,12 +85,12 @@ export default function Home({ allPostsData }) {
                     </Link>
                   </li>
                   <br /> <br />
-                </>
+                </React.Fragment>
               ))}
             </ul>
             <Link href="/blog">
               <a
-                class="link-item-button"
+                className="link-item-button"
                 style={{
                   margin: "auto",
                   display: "block",
