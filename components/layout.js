@@ -3,7 +3,7 @@ import styles from "./layout.module.css";
 
 const name = "Samuel Omanchi";
 export const siteTitle =
-  "Front end developer based in Bremen, Germany. Writing about HTML, CSS, JavaScript, React and React Native.";
+  "Samuel Omanchi: Front end developer based in Bremen, Germany. Writing about HTML, CSS, JavaScript, React and React Native.";
 
 export default function Layout({ children }) {
   return (
