@@ -6,10 +6,10 @@ const AboutMe = () => {
       <div className="create-copy">
         <h4>Let's create awesome Projects together</h4>
         <p>
-          I am a front end engineer at
+          I am a front end engineer at{" "}
           <a href="https://aug-software.de" target="_blank">
             A&G Software.
-          </a>
+          </a>{" "}
           I am currently based in Bremen, Germany. My competencies lie in the
           conversion of hi-fidelity and low-fidelity prototypes to excellent
           client-facing interfaces with a strong enthusiasm for the performant
@@ -26,8 +26,7 @@ const AboutMe = () => {
           understanding of version control using Github, which solidifies my
           ability to work in a team and on various projects. Get in touch if you
           would like to talk about a project and how I could help. Shoot me a
-          quick
-          <a href="mailto:omanchis@gmail.com">email</a>
+          quick <a href="mailto:omanchis@gmail.com">email</a>
         </p>
 
         <p className="name">- Samuel Omanchi</p>
