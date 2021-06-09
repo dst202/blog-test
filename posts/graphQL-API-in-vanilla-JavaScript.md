@@ -1,6 +1,7 @@
 ---
-title: "How to requests to a GraphQL API  in vanilla JavaScript"
-date: "2021-09-06"
+title: "How to make requests to a GraphQL API in vanilla JavaScript"
+slug: "GraphQL-API-in-vanilla-JavaScript"
+date: "2021-06-09"
 description: "Learn how to query the Github GraphQl API to make a clone of the github user profile repositories page..."
 ---
 
@@ -29,7 +30,7 @@ query {
 
 The Github GraphQL api has a single end point *https://api.github.com/graphql*. To be able to make a request to the and fetch needed data we need to have an Authorization token, to get this navigate to your profile > Settings > Developer settings > Personal access tokens, and "generate a token". Give the following permissions to match permissions we have in the expolorer:
 
-```
+```graphql
 user
 public_repo
 repo
@@ -43,7 +44,7 @@ read:gpg_key
 ```
 
 Find a more detailed guide in the [docs](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) on how to generate a personal token. Copy the token and save somewhere safe and we can hit the road.
-I'm using VScode and have "Live Server" extension installed. Create folder for the project with you directory looking like this:
+I'm using VScode and have "Live Server" extension installed. Create a folder for the project with you directory looking like this:
 
 ![project directory structure](https://res.cloudinary.com/cortehz/image/upload/v1623158372/blog_images/github-profile-files.png)
 
@@ -97,14 +98,15 @@ query GetUserGithubDetails($username: String!){
   }
 }
 
-//declaring variables in graphql queries
+
     `,
     variables: {
       username: `${username}`,
     },
   };
+  //declaring variables in graphql queries
 
-  //f
+  //awaiting fetch request
   const response = await fetch(GITHUB_GRAPHQL_ENDPOINT, {
     method: "post",
     mode: "cors",
@@ -135,7 +137,7 @@ There you have it, you have made a request to a GraphQL endpoint with fetch. It 
 
 You should get a response that looks like this printed to the console:
 
-![github repostories JSON](image.png)
+![github repostories JSON](https://res.cloudinary.com/cortehz/image/upload/v1623199736/blog_images/jsongithubprofile.png)
 
 We are presently hard-coding our username but we want to be able to take in an input and make a request to fetch that users data. In our _index.html_ we are going to add a form with an input tag and a submit button to handle dynamic username inputs.
 
@@ -331,7 +333,7 @@ We should now have a page that looks like this:
 
 ![github user repostories input page](https://res.cloudinary.com/cortehz/image/upload/v1623158091/blog_images/github-profile.png)
 
-In our _main.js_ we need to change our earlier self-calling async function to trigger only when the user submits the form, add the following to the top of the file, just beneath our endpoint URL declaration.
+In our _main.js_ we need to change our earlier self-calling async function to trigger only when the user submits the form, add the following to the top of the file, just beneath our endpoint URL declaration, replacing the self-calling async and hardcoded username.
 
 ```javascript
 
@@ -354,7 +356,6 @@ function clearError() {
 let userData = [];
 
 //async function to run our http request
-(async function () {
 async function getUserRepo(evt) {
   evt.preventDefault();
   const username = input.value;
@@ -366,6 +367,8 @@ async function getUserRepo(evt) {
   ...
 
 ```
+
+In our _if - else_ response handlers with the following, replacing the _console.logs_
 
 ```javascript
 ...
@@ -840,4 +843,4 @@ const repoList = repositories.nodes
 repoDetailsContainer.innerHTML = repoList;
 ```
 
-Hopefully, the comments do some justice as to what is going on. In the end, we have successfully created a very minimal Github profile to fetch any users first 20 repositories through the GitHub GraphQL API and displayed the data. With GraphQL it is easy to query for data - through one endpoint - that might usually need requests to multiple endpoints in a REST API. If you want to take a look at the complete code please checkout the repo on GitHub here. Or checkout a live version hosted on Netlify here. I hope this was worth your time. In part two, we would add a search to be able to filter through through the displayed repos.
+Hopefully, the comments do some justice as to what is going on. In the end, we have successfully created a very minimal Github profile to fetch any users first 20 repositories through the GitHub GraphQL API and displayed the data. With GraphQL it is easy to query for data - through one endpoint - that might usually need requests to multiple endpoints in a REST API. If you want to take a look at the complete code please checkout the repo on GitHub [here](https://github.com/cortehz/github-profile). I hope this was worth your time. In part two, we would add a search to be able to filter through through the displayed repos.

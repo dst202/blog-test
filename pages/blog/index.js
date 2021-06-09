@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../../components/layout";
-import utilStyles from "../../styles/utils.module.css";
+import utilStyles from "../../styles/utils.module.scss";
 import { getSortedPostsData } from "../../lib/posts";
 import Header from "../../components/Header/Header";
 import Link from "next/link";
@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
             {allPostsData.map(({ id, date, title, description }) => (
               <React.Fragment key={title}>
                 <li className={utilStyles.listItem}>
-                  <span>10 mins read</span>
+                  {/* <span>10 mins read</span> */}
                   <br />
                   <small className={utilStyles.lightText}>
                     <Date dateString={date} />
