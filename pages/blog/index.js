@@ -6,6 +6,7 @@ import Header from "../../components/Header/Header";
 import Link from "next/link";
 import Footer from "../../components/Footer/Footer";
 import React from "react";
+import Date from "../../components/Date/date";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
