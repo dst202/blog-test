@@ -12,6 +12,10 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="Samuel Omanchi"
+          content="Front end developer based in Bremen, Germany. Writing about HTML, CSS, JavaScript, React and React Native."
+        />
+        <meta
+          name="description"
           content="Nigerian front end developer based in Bremen, Germany. Writing about HTML, CSS, JavaScript, React and React Native."
         />
         <meta
@@ -22,6 +26,21 @@ export default function Layout({ children }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-134151606-2"
+        ></script>
+        <script
+          async
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', UA-134151606-2);`,
+          }}
+        />
       </Head>
 
       <main>{children}</main>
