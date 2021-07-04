@@ -28,8 +28,6 @@ const AboutMe = () => {
           would like to talk about a project and how I could help. Shoot me a
           quick <a href="mailto:omanchis@gmail.com">email</a>
         </p>
-
-        <p className="name">- Samuel Omanchi</p>
         <div className="button-container">
           <Link href="/blog">
             <a className="link-item-button">Read my blog</a>
