@@ -88,4 +88,8 @@
   max-height: 75vh;
   overflow-y: scroll;
   border-radius: 10px;
+  @media only screen and (max-width: 700px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
 }
