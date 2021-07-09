@@ -832,6 +832,6 @@ Final product should look just like this:
 
 ![screenshot](https://res.cloudinary.com/cortehz/image/upload/v1625868541/blog_images/Screenshot_2021-07-10_at_00.08.36.png)
 
-There you have it, we have finished a close replica of the design above. You can find the completed work here in this GitHub repository. Drop me a note on twitter if you find it useful or if I missed something or ...
+There you have it, we have finished a close replica of the design above. You can find the complete code [here in this GitHub repository](https://github.com/cortehz/fintech). Drop me a note on [twitter](https://twitter.com/Cortehzz) if you find it useful or if I missed something or ...
 
 In part two we'll add darkmode to make room for the design on the right. Ciao!
