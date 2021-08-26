@@ -7,8 +7,8 @@ const AboutMe = () => {
         <h4>Let's create awesome Projects together</h4>
         <p>
           I am a front end engineer at{" "}
-          <a href="https://aug-software.de" target="_blank">
-            A&G Software.
+          <a href="https://intuitive-ai.de" target="_blank">
+            Intuitive.Ai.
           </a>{" "}
           I am currently based in Bremen, Germany. My competencies lie in the
           conversion of hi-fidelity and low-fidelity prototypes to excellent
