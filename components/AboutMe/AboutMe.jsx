@@ -1,15 +1,15 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const AboutMe = () => {
   return (
-    <section className="lets-create" id="about">
-      <div className="create-copy">
+    <section className='lets-create' id='about'>
+      <div className='create-copy'>
         <h4>Let's create awesome Projects together</h4>
         <p>
-          I am a front end engineer at{" "}
-          <a href="https://intuitive-ai.de" target="_blank">
+          I am a front end engineer at{' '}
+          <a href='https://intuitive-ai.de' target='_blank'>
             Intuitive.Ai.
-          </a>{" "}
+          </a>{' '}
           I am currently based in Bremen, Germany. My competencies lie in the
           conversion of hi-fidelity and low-fidelity prototypes to excellent
           client-facing interfaces with a strong enthusiasm for the performant
@@ -26,19 +26,19 @@ const AboutMe = () => {
           understanding of version control using Github, which solidifies my
           ability to work in a team and on various projects. Get in touch if you
           would like to talk about a project and how I could help. Shoot me a
-          quick <a href="mailto:omanchis@gmail.com">email</a>
+          quick <a href='mailto:hello@samuelomanchi.me'>email</a>
         </p>
-        <div className="button-container">
-          <Link href="/blog">
-            <a className="link-item-button">Read my blog</a>
+        <div className='button-container'>
+          <Link href='/blog'>
+            <a className='link-item-button'>Read my blog</a>
           </Link>
         </div>
       </div>
-      <div className="portfolio-photo-section">
+      <div className='portfolio-photo-section'>
         <img
-          src="/images/Group 24@2x.png"
-          className="portrait"
-          alt="portfolio portrait"
+          src='/images/Group 24@2x.png'
+          className='portrait'
+          alt='portfolio portrait'
         />
       </div>
     </section>
