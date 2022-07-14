@@ -1,11 +1,14 @@
-@import "../../styles/variables.scss";
+@import "@scss/variables.scss";
 
 //hero section style
-.hero_section {
+.hero_copy {
   display: flex;
-  padding: 0rem 5rem 2rem 5rem;
+  padding: 5rem 5rem 2rem 5rem;
   max-width: 1400px;
-  margin: auto;
+  font-family: $fontPrimary;
+  gap: 2rem;
+  color: $primaryBlue;
+
   @media (max-width: 1032px) {
     padding: 0rem 2rem 2rem 2rem;
   }
@@ -14,71 +17,86 @@
     flex-direction: column;
   }
 
-  .hero_copy {
+  .imageContainer {
+    width: 90px;
+    height: 90px;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .my_name {
+    font-size: $large;
+    font-family: $fontMain;
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    animation: HeroH1Animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .duties {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: $fontPrimary;
-
-    .my_name {
-      font-size: $small;
-      color: $gray;
-      margin-bottom: 0;
-      opacity: 0;
-      animation: HeroH1Animation;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-    }
-
-    .smaller {
-      margin-top: 0;
-      color: $primaryPurplelight;
-      opacity: 0;
-      animation: HeroH2Animation;
-      animation-duration: 3s;
-      animation-fill-mode: forwards;
-    }
-
-    .social_icons_top {
+    align-items: center;
+    font-family: $fontJura, sans-serif;
+    font-weight: 300;
+    li {
       display: flex;
-
-      img {
-        margin-right: 20px;
+      align-items: center;
+      svg {
+        margin: 0 0.5rem;
       }
     }
   }
 
-  .hero_images {
-    flex: 3;
-    justify-content: flex-end;
-    padding-top: $large;
+  .smaller {
+    margin-top: 0;
+    color: $primaryPurplelight;
+    opacity: 0;
+    animation: HeroH2Animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .social_icons_top {
+    display: flex;
 
     img {
-      float: right;
-      max-width: 100%;
+      margin-right: 20px;
     }
+  }
+}
 
-    .second_image_container {
-      position: relative;
-      min-width: 300px;
-      height: 100%;
-      left: -3rem;
-      top: 20%;
+.hero_images {
+  flex: 3;
+  justify-content: flex-end;
+  padding-top: $large;
 
-      .rounded_object {
-        position: absolute;
-        left: 75%;
-        top: -20%;
-        //   background-color: $primaryPurplelight;
-        z-index: -2;
-      }
+  img {
+    float: right;
+    max-width: 100%;
+  }
+
+  .second_image_container {
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    left: -3rem;
+    top: 20%;
+
+    .rounded_object {
+      position: absolute;
+      left: 75%;
+      top: -20%;
+      //   background-color: $primaryPurplelight;
+      z-index: -2;
     }
   }
 }
 
 //skills style
 .skills {
-  background: #fcfcfc;
   display: flex;
   justify-content: space-around;
   flex-direction: column;

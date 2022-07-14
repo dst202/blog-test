@@ -1,17 +1,17 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.scss";
-import { getSortedPostsData } from "../lib/posts";
+import Layout, { siteTitle } from "@components/layout";
+import utilStyles from "@scss/utils.module.scss";
+import { getSortedPostsData } from "@lib/posts";
 import Link from "next/link";
-import Hero from "../components/Hero/Hero";
-import Date from "../components/Date/date";
-import Header from "../components/Header/Header";
-import Services from "../components/MyServices/Services";
-import Portfolio from "../components/Portfolio/Portfolio";
-import AboutMe from "../components/AboutMe/AboutMe";
-import Testimonials from "../components/Testimonials/Testimonials";
-import Contact from "../components/Contact/Contact";
-import Footer from "../components/Footer/Footer";
+import Hero from "@components/Hero/Hero";
+import Date from "@components/Date/date";
+import Header from "@components/Header/Header";
+import Services from "@components/MyServices/Services";
+import Portfolio from "@components/Portfolio/Portfolio";
+import AboutMe from "@components/AboutMe/AboutMe";
+import Testimonials from "@components/Testimonials/Testimonials";
+import Contact from "@components/Contact/Contact";
+import Footer from "@components/Footer/Footer";
 import React from "react";
 
 export async function getStaticProps() {
@@ -30,10 +30,12 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>{" "}
       <Header home={true} />
-      <main>
+      <header>
         <Hero />
+      </header>
+      <main>
         <Services />{" "}
-        <Layout home>
+        <Layout>
           <section className="blog" id="blog">
             <h3>
               <span>Blog</span>

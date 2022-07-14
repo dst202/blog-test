@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600;700;800;900&family=Nunito:wght@200;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;700&family=Red+Hat+Display:wght@500;700;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 $primaryPurplelight: hsl(262, 47%, 55%);
 $darkerPurple: hsl(262, 52%, 47%);
 $gray: #828282;
+$bgMain: #fcf1e5;
+$primaryBlue: #374164;
 
 $small: 1rem;
-$medium: 2rem;
-$large: 3rem;
+$medium: 1.5rem;
+$large: 2.5rem;
 
 $fontPrimary: "MuseoModerno";
 $fontNunito: "Nunito";
+
+$fontMain: "Red Hat Display";
+$fontJura: "Jura";
 
 $veryLightGray: hsl(0, 0%, 98%);
 $LightGrayishBlue: hsl(220, 16%, 96%);

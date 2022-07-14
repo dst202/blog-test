@@ -8,6 +8,8 @@ body {
   width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: $fontJura, sans-serif;
+  background-color: $bgMain;
 }
 
 img[alt="screenshot"] {
@@ -86,7 +88,6 @@ img {
 //services section
 .services {
   padding: 2rem 5rem 5rem 5rem;
-  background: #fcfcfc;
   content-visibility: auto;
 
   @media (max-width: 1032px) {
