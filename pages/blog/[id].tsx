@@ -1,10 +1,10 @@
 import Layout from "../../components/layout";
 import Head from "next/head";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import utilStyles from "../../styles/utils.module.scss";
+import utilStyles from "../../scss/utils.module.scss";
 import Date from "../../components/Date/date";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 

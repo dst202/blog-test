@@ -1,13 +1,20 @@
 @import "@scss/variables.scss";
 
 //hero section style
-.hero_copy {
+.heroCopy {
   display: flex;
-  padding: 5rem 5rem 2rem 5rem;
-  max-width: 1400px;
+  padding: 5rem 5rem;
+  max-width: 1200px;
+  margin: auto;
   font-family: $fontPrimary;
   gap: 2rem;
   color: $primaryBlue;
+
+  .heroSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
   @media (max-width: 1032px) {
     padding: 0rem 2rem 2rem 2rem;
@@ -18,16 +25,18 @@
   }
 
   .imageContainer {
-    width: 90px;
-    height: 90px;
+    width: 95px;
+    height: 95px;
     img {
       border-radius: 50%;
+      max-width: 100%;
     }
   }
 
   .my_name {
     font-size: $large;
-    font-family: $fontMain;
+    font-weight: bold;
+    line-height: 47.63px;
     margin-top: 0;
     margin-bottom: 0;
     opacity: 0;
@@ -40,7 +49,8 @@
     display: flex;
     align-items: center;
     font-family: $fontJura, sans-serif;
-    font-weight: 300;
+    line-height: 14px;
+    font-weight: 400;
     li {
       display: flex;
       align-items: center;
@@ -61,7 +71,8 @@
 
   .social_icons_top {
     display: flex;
-
+    gap: 1rem;
+    align-items: center;
     img {
       margin-right: 20px;
     }
@@ -91,43 +102,6 @@
       top: -20%;
       //   background-color: $primaryPurplelight;
       z-index: -2;
-    }
-  }
-}
-
-//skills style
-.skills {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 5rem 7rem 5rem 7rem;
-
-  @media (max-width: 1032px) {
-    padding: 0rem 2rem 2rem 2rem;
-  }
-
-  .skills_header {
-    font-family: $fontPrimary;
-    color: $gray;
-    text-align: center;
-    font-size: 16px;
-    margin-bottom: 2.5rem;
-  }
-
-  .skills_images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .svgSkills {
-      color: $gray;
-      font-size: 3.5rem;
-      margin: 2rem;
-
-      @media (max-width: 450px) {
-        font-size: 3rem;
-        margin: 1rem;
-      }
     }
   }
 }

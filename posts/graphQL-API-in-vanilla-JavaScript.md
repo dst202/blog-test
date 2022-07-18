@@ -3,6 +3,8 @@ title: "How to make requests to a GraphQL API in vanilla JavaScript"
 slug: "GraphQL-API-in-vanilla-JavaScript"
 date: "2021-06-09"
 description: "Learn how to query the Github GraphQl API to make a clone of the github user profile repositories page..."
+image: "https://res.cloudinary.com/cortehz/image/upload/v1657960274/blog_images/main-image/graphQl.png"
+tags: ["javascript"]
 ---
 
 Github has a GraphQl API where that "offers flexibility and the ability to define precisely the data you want to fetch" according to the [docs](https://docs.github.com/en/graphql/overview/about-the-graphql-api) and I completely agree. So, we are going to take it for a spin and build a Github profile repositories page that should look just like this.

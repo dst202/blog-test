@@ -2,24 +2,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;700&family=Red+Hat+Display:wght@500;700;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
+@font-face {
+  font-family: Jura;
+  src: url("/fonts/Jura-VariableFont_wght.ttf");
+  format: ("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: RedHatDisplay;
+  src: url("/fonts/RedHatDisplay-VariableFont_wght.ttf");
+  format: ("woff2");
+  font-display: swap;
+}
+
 $primaryPurplelight: hsl(262, 47%, 55%);
 $darkerPurple: hsl(262, 52%, 47%);
-$gray: #828282;
+$gray: #d9d9d9;
 $bgMain: #fcf1e5;
 $primaryBlue: #374164;
+$primaryGold: #f1c494;
+$primaryBrown: #c08b8b;
+$darkGray: #6f6f6f;
 
 $small: 1rem;
-$medium: 1.5rem;
+$medium: 1.2rem;
 $large: 2.5rem;
 
 $fontPrimary: "MuseoModerno";
 $fontNunito: "Nunito";
 
-$fontMain: "Red Hat Display";
+$fontMain: "RedHatDisplay";
 $fontJura: "Jura";
 
 $veryLightGray: hsl(0, 0%, 98%);
 $LightGrayishBlue: hsl(220, 16%, 96%);
+$primaryWhite: hsl(0, 0%, 100%);
 
 $fontFam: "Open Sans";
 $bodyCopy: 18px;

@@ -3,15 +3,25 @@ import Link from "next/link";
 import Layout from "../layout";
 import heroStyles from "./hero.module.scss";
 
+import { LinkedinIcon, TwitterIcon, GithubIcon, DribbbleIcon } from "../icons";
+
+export const socials = [
+  { link: "", icon: <DribbbleIcon /> },
+  { link: "https://twitter.com/cortehzz", icon: <TwitterIcon /> },
+  {
+    link: "https://www.linkedin.com/in/samuel-omanchi-aa49708a/",
+    icon: <LinkedinIcon />,
+  },
+  { link: "https://github.com/cortehz", icon: <GithubIcon /> },
+];
 const Hero = () => {
-  const { hero_section, hero_copy, imageContainer, my_name, duties } =
-    heroStyles;
+  const { heroSection, heroCopy, imageContainer, my_name, duties } = heroStyles;
   return (
-    <div className={hero_copy}>
+    <div className={heroCopy}>
       <div className={imageContainer}>
         <img src="/images/self.jpg" alt="Samuel Omanchi portrait" />
       </div>
-      <div>
+      <div className={heroSection}>
         <h1 className={my_name}>Hi, My name is Samuel Omanchi</h1>
 
         <ul className={duties}>
@@ -37,23 +47,11 @@ const Hero = () => {
         </ul>
 
         <div className={heroStyles.social_icons_top}>
-          <a href="https://twitter.com/cortehzz" target="_blanck">
-            <img src="/images/twitter.svg" alt="twitter icon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/samuel-omanchi-aa49708a/"
-            target="_blanck"
-          >
-            <img src="/images/linkedin.svg" alt="linkedin icon" />
-          </a>
-
-          <a href="https://github.com/cortehz" target="_blanck">
-            <img src="/images/github.svg" alt="github icon" />
-          </a>
-
-          <a className="link-item-button" href="#about">
-            What I can Do
-          </a>
+          {socials.map(({ link, icon }) => (
+            <a href={link} key={link} target="_blanck">
+              {icon}
+            </a>
+          ))}
         </div>
       </div>
     </div>

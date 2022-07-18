@@ -1,13 +1,12 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../../components/layout";
-import utilStyles from "../../styles/utils.module.scss";
+import utilStyles from "@scss/utils.module.scss";
 import { getSortedPostsData } from "../../lib/posts";
 import Header from "../../components/Header/Header";
 import Link from "next/link";
-import Footer from "../../components/Footer/Footer";
+import Footer from "@components/Footer";
 import React from "react";
-import Date from "../../components/Date/date";
-
+import Date from "@components/Date/date";
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
