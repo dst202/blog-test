@@ -1,0 +1,15 @@
+@import "@scss/variables.scss";
+
+.button {
+  border-radius: 8px;
+  background-color: $primaryBrown;
+  font-family: $fontJura;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: $primaryWhite;
+  opacity: 0.5;
+
+  .selected {
+    opacity: 1;
+  }
+}

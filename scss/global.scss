@@ -465,25 +465,8 @@ footer {
 
         width: 100%;
         gap: 0.5rem;
-        input {
+        .inputContainer {
           flex: 4;
-          background-color: $primaryWhite;
-          font-family: $fontJura;
-          border: none;
-          padding: 1rem;
-          border-radius: 8px;
-          &:focus-visible {
-            outline: none;
-            border: 1px solid $primaryBrown;
-          }
-        }
-        button {
-          border-radius: 8px;
-          background-color: $primaryBrown;
-          font-family: $fontJura;
-          border: none;
-          padding: 0 1rem;
-          color: $primaryWhite;
         }
       }
     }
@@ -533,11 +516,37 @@ footer {
 //projects page
 .main-container {
   content-visibility: auto;
+
+  .filter-posts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    input {
+      max-width: 350px;
+      margin-top: 1.5rem;
+    }
+    .category-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+
+      button {
+        min-width: fit-content;
+      }
+
+      button.selected {
+        opacity: 1;
+      }
+    }
+  }
   h1 {
     color: #aaa9a9;
+    margin-top: 5rem;
     font-size: $large;
     text-align: center;
-    font-family: $fontPrimary;
+    font-family: $fontJura;
     span {
       color: rgb(89, 89, 89);
     }

@@ -1,0 +1,14 @@
+@import "@scss/variables.scss";
+
+.input {
+  background-color: $primaryWhite;
+  font-family: $fontJura;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $primaryBrown;
+  }
+}

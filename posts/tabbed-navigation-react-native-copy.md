@@ -1,5 +1,5 @@
 ---
-title: "How to make a tabbed Navigation with React Navigation in React Native"
+title: "How to make a tabbed Navigation with React Navigation in React Native copy"
 slug: "tabbed-navigation-react-native"
 date: "2022-07-09"
 description: "Build a fictional Fintech application in React Native with Tabbed Navigation and horizontal scroll and style it with Styled-Components."

@@ -1,8 +1,9 @@
 import { socials } from "@components/Hero/Hero";
 import Wrapper from "@components/Wrapper";
-import heroStyles from "@components/Hero/hero.module.scss";
 import Link from "next/link";
 import { links } from "@components/Header/Header";
+import Input from "@components/Forms/Input";
+import Button from "@components/Forms/Button";
 
 const Footer = () => {
   return (
@@ -31,12 +32,15 @@ const Footer = () => {
               Get notified when next I make a post.
             </p>
             <form className="subscribe-form">
-              <input
-                type={"email"}
-                placeholder={"Please enter your email address"}
-                required
-              />
-              <button type="submit">Notify me</button>
+              <div className={"inputContainer"}>
+                <Input
+                  type={"email"}
+                  placeholder={"Please enter your email address"}
+                  required
+                />
+              </div>
+
+              <Button label="Notify me" mode="primary" type={"submit"} />
             </form>
           </div>
 
