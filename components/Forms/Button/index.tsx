@@ -1,17 +1,17 @@
-import React from "react";
-import styles from "./button.module.scss";
+import React from 'react';
+import styles from './button.module.scss';
 
 interface ButtonProps {
-  mode: "primary" | "secondary";
+  mode: 'primary' | 'secondary';
   label: string;
-  type?: "submit";
+  type?: 'submit';
   onClick?: () => void;
-  className: string;
+  className?: string;
 }
 const Button = ({ mode, label, className, ...props }: ButtonProps) => {
   const { button } = styles;
   return (
-    <button className={`${button} ${className}`} {...props}>
+    <button className={`${button} ${styles[className]}`} {...props}>
       {label}
     </button>
   );

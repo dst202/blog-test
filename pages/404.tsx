@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header/Header";
-import Layout from "../components/layout";
+import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import { Layout } from '../components/layout';
 
 // pages/404.js
 export default function Custom404() {
@@ -8,7 +8,7 @@ export default function Custom404() {
     <>
       <Header />
       <Layout>
-        <h1 style={{ minHeight: "70vh" }}>404 - Page Not Found</h1>
+        <h1 style={{ minHeight: '70vh' }}>404 - Page Not Found</h1>
       </Layout>
 
       <Footer />
