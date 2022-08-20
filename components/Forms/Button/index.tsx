@@ -5,7 +5,7 @@ interface ButtonProps {
   mode: "primary" | "secondary";
   label: string;
   type?: "submit";
-  onClick: () => void;
+  onClick?: () => void;
   className: string;
 }
 const Button = ({ mode, label, className, ...props }: ButtonProps) => {

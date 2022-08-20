@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 import Link from "next/link";
 import Footer from "@components/Footer";
 import React from "react";
-import Date from "@components/Date/date";
+import Date from "@components/Date";
 import Wrapper from "@components/Wrapper";
 import Input from "@components/Forms/Input";
 import Button from "@components/Forms/Button";
@@ -45,17 +45,13 @@ export default function Home({ allPostsData }) {
               <div className="category-buttons">
                 {["React", "React Native", "Javascript", "CSS"].map(
                   (buttonItem) => (
-                    <>
-                      {" "}
-                      {console.log(selected[buttonItem])}
-                      <Button
-                        key={buttonItem}
-                        label={buttonItem}
-                        mode={"secondary"}
-                        className={selected[buttonItem] ? "selected" : ""}
-                        onClick={() => toggleSelected(buttonItem)}
-                      />
-                    </>
+                    <Button
+                      key={buttonItem}
+                      label={buttonItem}
+                      mode={"secondary"}
+                      className={selected[buttonItem] ? "selected" : ""}
+                      onClick={() => toggleSelected(buttonItem)}
+                    />
                   )
                 )}
               </div>

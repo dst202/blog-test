@@ -40,7 +40,12 @@ const Footer = () => {
                 />
               </div>
 
-              <Button label="Notify me" mode="primary" type={"submit"} />
+              <Button
+                label="Notify me"
+                mode="primary"
+                type={"submit"}
+                className={"selected"}
+              />
             </form>
           </div>
 

@@ -2,7 +2,7 @@ import Layout from "../../components/layout";
 import Head from "next/head";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import utilStyles from "../../scss/utils.module.scss";
-import Date from "../../components/Date/date";
+import Date from "../../components/Date";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import ReactMarkdown from "react-markdown";
