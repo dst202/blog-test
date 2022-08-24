@@ -5,15 +5,15 @@ import Wrapper from "@components/Wrapper";
 
 export const links = [
   {
-    link: "/#latest",
+    link: "/#latest-blog",
     linkDescription: "Latest",
   },
   {
     link: "/blog",
-    linkDescription: "Services",
+    linkDescription: "Blog",
   },
   {
-    link: "/career",
+    link: "/#career",
     linkDescription: "Career",
   },
 ];

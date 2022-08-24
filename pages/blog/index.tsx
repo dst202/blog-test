@@ -1,16 +1,16 @@
-import Head from 'next/head';
-import { siteTitle, Layout } from '../../components/layout';
-import utilStyles from '@scss/utils.module.scss';
-import styles from './blog.module.scss';
+import Head from "next/head";
+import { siteTitle, Layout } from "../../components/layout";
+import utilStyles from "@scss/utils.module.scss";
+import styles from "./blog.module.scss";
 
-import { getSortedPostsData } from '../../lib/posts';
-import Header from '../../components/Header/Header';
-import Footer from '@components/Footer';
-import React, { useState } from 'react';
-import Wrapper from '@components/Wrapper';
-import Input from '@components/Forms/Input';
-import Button from '@components/Forms/Button';
-import BlogList from '@components/BlogList';
+import { getSortedPostsData } from "../../lib/posts";
+import Header from "../../components/Header/Header";
+import Footer from "@components/Footer";
+import React, { useState } from "react";
+import Wrapper from "@components/Wrapper";
+import Input from "@components/Forms/Input";
+import Button from "@components/Forms/Button";
+import BlogList from "@components/BlogList";
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -25,7 +25,7 @@ export default function Home({ allPostsData }) {
     {}
   );
 
-  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const toggleSelected = (buttonItem: string) => {
     setSelected({ [buttonItem]: selected[buttonItem] ? false : true });
@@ -57,33 +57,37 @@ export default function Home({ allPostsData }) {
         </Head>
 
         <Wrapper>
-          <section className='main-container'>
+          <section className="main-container">
             <h1>
               <span>/</span>blog-posts<span>.</span>
             </h1>
-            <div className='filter-posts'>
+            <div className="filter-posts">
               <Input
-                type='text'
-                placeholder='Find post easily'
+                type="text"
+                placeholder="Find post easily"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
 
-              <div className='category-buttons'>
-                {['React', 'React Native', 'Javascript', 'CSS'].map(
+              <div className="category-buttons">
+                {["React", "React Native", "Javascript", "CSS"].map(
                   (buttonItem) => (
                     <Button
                       key={buttonItem}
                       label={buttonItem}
-                      mode={'secondary'}
-                      className={selected[buttonItem] ? 'selected' : ''}
+                      mode={"secondary"}
+                      className={selected[buttonItem] ? "selected" : ""}
                       onClick={() => toggleSelected(buttonItem)}
                     />
                   )
                 )}
               </div>
             </div>
-            <BlogList styles={styles} allPostsData={filteredPosts} />
+            {filteredPosts.length ? (
+              <BlogList styles={styles} allPostsData={filteredPosts} />
+            ) : (
+              <div className="empty-post-section">Couldnt find post(s)</div>
+            )}
           </section>
           <section
             className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
