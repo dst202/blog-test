@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Layout from "../layout";
+import { Layout } from "../layout";
 import heroStyles from "./hero.module.scss";
 
 import { LinkedinIcon, TwitterIcon, GithubIcon, DribbbleIcon } from "../icons";
