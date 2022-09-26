@@ -53,7 +53,7 @@ export default function Home({ allPostsData }) {
           </Wrapper>
         </Layout>
       </main>
-      <Career />
+      {/* <Career /> */}
       <Footer />
     </>
   );
