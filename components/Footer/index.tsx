@@ -4,30 +4,39 @@ import Link from "next/link";
 import { links } from "@components/Header/Header";
 import Input from "@components/Forms/Input";
 import Button from "@components/Forms/Button";
-import { lists, setConfig } from "@mailchimp/mailchimp_marketing";
+import mailchimp, { lists, setConfig } from "@mailchimp/mailchimp_marketing";
 import { useState } from "react";
 
-const Footer = () => {
-  setConfig({
-    apiKey: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
-    server: process.env.NEXT_PUBLLIC_MAILCHIMP_SERVER_URL,
-  });
+mailchimp.setConfig({
+  apiKey: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
+  server: process.env.NEXT_PUBLIC_MAILCHIMP_SERVER_URL,
+});
 
+const Footer = () => {
   const run = async () => {
     try {
-      const response = await lists.addListMember("9206070ab8", {
-        email_address: email,
-        status: "pending",
+      const signup = await fetch("/api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email_address: email.email,
+          status: "subscribed",
+        }),
       });
-      console.log(response, "response");
+      const response = await signup.json();
+
+      setEmail({ email: "", subcriptionResponse: response.message });
     } catch (error) {
       console.log(error);
+      setEmail({ ...email, subcriptionResponse: error });
     }
   };
 
-  // run();
+  const [email, setEmail] = useState({ email: "", subcriptionResponse: "" });
 
-  const [email, setEmail] = useState("");
+  console.log(email, "email");
 
   return (
     <Wrapper>
@@ -65,8 +74,10 @@ const Footer = () => {
                 <Input
                   type={"email"}
                   placeholder={"Please enter your email address"}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={email.email}
+                  onChange={(e) =>
+                    setEmail({ ...email, email: e.target.value })
+                  }
                   required
                 />
               </div>
