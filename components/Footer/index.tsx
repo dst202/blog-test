@@ -27,16 +27,21 @@ const Footer = () => {
       });
       const response = await signup.json();
 
-      setEmail({ email: "", subcriptionResponse: response.message });
+      setEmail({
+        email: "",
+        subcriptionResponse: response.message,
+        error: false,
+      });
     } catch (error) {
-      console.log(error);
-      setEmail({ ...email, subcriptionResponse: error });
+      setEmail({ ...email, subcriptionResponse: error, error: true });
     }
   };
 
-  const [email, setEmail] = useState({ email: "", subcriptionResponse: "" });
-
-  console.log(email, "email");
+  const [email, setEmail] = useState({
+    email: "",
+    subcriptionResponse: "",
+    error: false,
+  });
 
   return (
     <Wrapper>
@@ -84,6 +89,9 @@ const Footer = () => {
 
               <Button label="Notify me" mode="primary" type={"submit"} />
             </form>
+            <p style={{ color: email.error ? "red" : "green" }}>
+              {email?.subcriptionResponse}
+            </p>
           </div>
 
           <div className="footer-links-right">

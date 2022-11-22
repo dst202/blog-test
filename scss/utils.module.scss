@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 .heading2Xl {
   font-size: 2.5rem;
@@ -6,6 +6,7 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  color: $primaryBlue;
 }
 
 .headingXl {
@@ -14,6 +15,7 @@
   font-weight: 700;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  color: $primaryBlue;
 }
 
 .headingLg {
@@ -177,25 +179,30 @@
 /* //article styles */
 
 .article {
-  font-family: $fontNunito;
+  font-family: $fontJura;
+
   line-height: 1.6;
   font-size: 19px;
   min-height: 70vh;
   max-width: 768px;
   margin: 5rem auto;
+  color: $primaryBlue;
 }
 
 .article a {
-  color: #4433ff;
+  color: $darkerPurple;
+  text-decoration: underline;
 }
 
 .article code {
-  font-family: 'JetBrains Mono' !important;
-  max-width: 'calc(100% + 64px)';
+  font-family: "JetBrains Mono" !important;
+  background-color: $primaryGold;
+  max-width: "calc(100% + 64px)";
 }
 
 .article pre {
   background-color: #f5f6f9;
+
   margin-right: -32px;
   margin-left: -32px;
   margin-top: 2rem;

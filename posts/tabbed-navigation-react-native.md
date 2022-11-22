@@ -1,10 +1,10 @@
 ---
-title: 'How to make a tabbed Navigation with React Navigation in React Native1'
-slug: 'tabbed-navigation-react-native'
-date: '2022-07-09'
-description: 'Build a fictional Fintech application in React Native with Tabbed Navigation and horizontal scroll and style it with Styled-Components.'
-image: 'https://res.cloudinary.com/cortehz/image/upload/v1657960274/blog_images/main-image/screenshot.png'
-tags: ['react native']
+title: "How to make a tabbed Navigation with React Navigation in React Native"
+slug: "tabbed-navigation-react-native"
+date: "2022-07-09"
+description: "Build a fictional Fintech application in React Native with Tabbed Navigation and horizontal scroll and style it with Styled-Components."
+image: "https://res.cloudinary.com/cortehz/image/upload/v1657960274/blog_images/main-image/screenshot.png"
+tags: ["react native"]
 ---
 
 In this article, we are building Tabbed Navigation by creating a fictional Fintech Application Layout using React Native (Expo) and Styled Components. This was inspired from the Dribbble shot below by [Emanuel Mateiuc](https://dribbble.com/emanuelmateiuc). This article assumes some basic knowledge of React and CSS flexbox at the least, but a little documentation and you should be fine.
@@ -38,7 +38,7 @@ If everything goes according to plan we should have plain Typscript Application 
 First off, strip off most of the code in _App.tsx_ and leaving just an unstyled _<View>_ tag. Then create the user header section, in root first create a components directory to hold all components. In components create another header directory and in there our _js Header.tsx_ and _header.styles.ts_ files to hold our header and the styles respectively. Now, _js App.tsx_ should look just like this (an empty React Fragment):
 
 ```js
-import React from 'react';
+import React from "react";
 
 export default function App() {
   return <></>;
@@ -54,8 +54,8 @@ npm install --save styled-components @types/styled-components @types/styled-comp
 In _Header.tsx_:
 
 ```js
-import * as React from 'react';
-import Svg, { Path } from 'react-native-svg';
+import * as React from "react";
+import Svg, { Path } from "react-native-svg";
 import {
   TopRegion,
   Row,
@@ -63,9 +63,9 @@ import {
   TextBold,
   TextNormal,
   TextSmall,
-} from './Header.style';
-import { Image, StyleSheet } from 'react-native';
-import Layout from '../Layout';
+} from "./Header.style";
+import { Image, StyleSheet } from "react-native";
+import Layout from "../Layout";
 
 const Header: React.FC = () => {
   return (
@@ -80,19 +80,19 @@ const Header: React.FC = () => {
             <Svg
               width={24}
               height={24}
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='rgba(255,255,255, 0.8)'
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="rgba(255,255,255, 0.8)"
               strokeWidth={2}
-              strokeLinecap='round'
-              strokeLinejoin='round'
+              strokeLinecap="round"
+              strokeLinejoin="round"
               style={{ marginRight: 10 }}
             >
-              <Path d='M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0' />
+              <Path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
             </Svg>
             <Image
               source={{
-                uri: 'https://res.cloudinary.com/cortehz/image/upload/v1623664852/IMG_7422_ij5qgj.jpg',
+                uri: "https://res.cloudinary.com/cortehz/image/upload/v1623664852/IMG_7422_ij5qgj.jpg",
               }}
               style={styles.image}
             />
@@ -108,12 +108,12 @@ const Header: React.FC = () => {
             <TextBold>$145.00</TextBold>
             <Svg
               style={{ marginLeft: 10 }}
-              width='16'
-              height='16'
-              fill='#364ec5'
-              viewBox='0 0 16 16'
+              width="16"
+              height="16"
+              fill="#364ec5"
+              viewBox="0 0 16 16"
             >
-              <Path d='M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6H4z' />
+              <Path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6H4z" />
             </Svg>
           </Row>
         </Row>
@@ -138,7 +138,7 @@ Here we have some styled components put together, the top region being responsib
 In _Header.styles.ts_:
 
 ```ts
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 // user top region container
 export const TopRegion = styled.View`
@@ -185,8 +185,8 @@ We have also added some styles for the varios Texts with Bold, Small and Normal.
 In _Layout.tsx_:
 
 ```ts
-import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import * as React from "react";
+import { View, StyleSheet } from "react-native";
 
 const Layout: React.FC = ({ children }) => {
   return <View style={styles.container}>{children}</View>;
@@ -207,9 +207,9 @@ Next, import _Header_ in _App.tsx_ also creating a new _App.style.ts_ where styl
 In _App.tsx_:
 
 ```ts
-import React from 'react';
-import { MainContainer } from './App.style';
-import Header from './components/header/Header';
+import React from "react";
+import { MainContainer } from "./App.style";
+import Header from "./components/header/Header";
 
 export default function App() {
   return (
@@ -225,7 +225,7 @@ In the styles we have a new _styled-component_ called _MainContainer_ which is a
 in _App.style.ts_:
 
 ```ts
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export const MainContainer = styled.View`
   flex: 1;
@@ -342,12 +342,12 @@ Here we want the _NavigationContainer_ to the _MyTheme_ above. We are then using
 First off, _TabsTop.tsx_:
 
 ```ts
-import React, { useState } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import Svg, { Path } from 'react-native-svg';
-import { MaterialTopTabBarProps } from '@react-navigation/material-top-tabs';
-import Layout from './Layout';
-import { Row } from './header/Header.style';
+import React, { useState } from "react";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import Svg, { Path } from "react-native-svg";
+import { MaterialTopTabBarProps } from "@react-navigation/material-top-tabs";
+import Layout from "./Layout";
+import { Row } from "./header/Header.style";
 
 const TabsTop: React.FC<MaterialTopTabBarProps> = ({
   state,
@@ -371,7 +371,7 @@ const TabsTop: React.FC<MaterialTopTabBarProps> = ({
 
             const onPress = () => {
               const event = navigation.emit({
-                type: 'tabPress',
+                type: "tabPress",
                 target: route.key,
                 canPreventDefault: true,
               });
@@ -383,16 +383,16 @@ const TabsTop: React.FC<MaterialTopTabBarProps> = ({
 
             const bg = (focus: boolean) => {
               if (focus) {
-                return '#001cad';
+                return "#001cad";
               } else {
-                return 'transparent';
+                return "transparent";
               }
             };
 
             return (
               <TouchableOpacity
                 key={index}
-                accessibilityRole='button'
+                accessibilityRole="button"
                 accessibilityState={isFocused ? { selected: true } : {}}
                 accessibilityLabel={options.tabBarAccessibilityLabel}
                 testID={options.tabBarTestID}
@@ -408,8 +408,8 @@ const TabsTop: React.FC<MaterialTopTabBarProps> = ({
               >
                 <Text
                   style={{
-                    color: isFocused ? 'white' : '#222',
-                    textAlign: 'center',
+                    color: isFocused ? "white" : "#222",
+                    textAlign: "center",
                   }}
                 >
                   {label}
@@ -421,20 +421,20 @@ const TabsTop: React.FC<MaterialTopTabBarProps> = ({
         <View
           style={{
             flex: 1,
-            alignItems: 'flex-end',
+            alignItems: "flex-end",
           }}
         >
           <Svg
             width={24}
             height={24}
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
             strokeWidth={2}
-            strokeLinecap='round'
-            strokeLinejoin='round'
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <Path d='M12 20V10M18 20V4M6 20v-4' />
+            <Path d="M12 20V10M18 20V4M6 20v-4" />
           </Svg>
         </View>
       </Row>
@@ -460,8 +460,8 @@ Next we actually need to create the components these routes point to, create **A
 _Accounts.tsx_:
 
 ```ts
-import React from 'react';
-import { Text, View } from 'react-native';
+import React from "react";
+import { Text, View } from "react-native";
 
 export interface AccountProps {}
 
@@ -487,7 +487,7 @@ For **Accounts** we'll create two new components for the **RecentTransaction** a
 In **RecentTransaction.tsx**:
 
 ```ts
-import * as React from 'react';
+import * as React from "react";
 import {
   View,
   Text,
@@ -496,8 +496,8 @@ import {
   NativeTouchEvent,
   StyleSheet,
   Image,
-} from 'react-native';
-import { Row } from '../header/Header.style';
+} from "react-native";
+import { Row } from "../header/Header.style";
 
 interface Transaction {
   id: number;
@@ -510,37 +510,37 @@ interface Transaction {
 export const transcactionList = [
   {
     id: 0,
-    transactionCategory: 'Withdrawal',
-    transactionAmount: '500',
+    transactionCategory: "Withdrawal",
+    transactionAmount: "500",
     userProfile:
-      'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    transactionDate: 'Jul. 10',
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    transactionDate: "Jul. 10",
   },
 
   {
     id: 1,
-    transactionCategory: 'Withdrawal',
-    transactionAmount: '450',
+    transactionCategory: "Withdrawal",
+    transactionAmount: "450",
     userProfile:
-      'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    transactionDate: 'Jun. 12',
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    transactionDate: "Jun. 12",
   },
   {
     id: 2,
-    transactionCategory: 'Withdrawal',
-    transactionAmount: '1500',
+    transactionCategory: "Withdrawal",
+    transactionAmount: "1500",
     userProfile:
-      'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    transactionDate: 'Aug. 2',
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    transactionDate: "Aug. 2",
   },
 
   {
     id: 3,
-    transactionCategory: 'Withdrawal',
-    transactionAmount: '450',
+    transactionCategory: "Withdrawal",
+    transactionAmount: "450",
     userProfile:
-      'https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    transactionDate: 'May 1',
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    transactionDate: "May 1",
   },
 ];
 
@@ -552,7 +552,7 @@ const RecentTransactions: React.FC<RecentTransactionsProps> = () => {
       <Row>
         <Text>Recent Transaction</Text>
         <Button
-          title='See all'
+          title="See all"
           onPress={(ev: NativeSyntheticEvent<NativeTouchEvent>) => {
             console.log(ev);
           }}
@@ -572,7 +572,7 @@ const RecentTransactions: React.FC<RecentTransactionsProps> = () => {
                   <Text style={styles.textBold}>
                     {transaction.transactionCategory}
                   </Text>
-                  <Text style={{ color: '#999', marginTop: 5 }}>
+                  <Text style={{ color: "#999", marginTop: 5 }}>
                     {transaction.transactionDate}
                   </Text>
                 </View>
@@ -599,7 +599,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   textBold: {
-    fontWeight: '600',
+    fontWeight: "600",
     fontSize: 18,
   },
 });
@@ -610,21 +610,21 @@ We have created a fake list of transactions which we map over and display while 
 In **\_Analytics.tsx**:
 
 ```ts
-import * as React from 'react';
-import { ScrollView, View, Text } from 'react-native';
-import styled from 'styled-components/native';
+import * as React from "react";
+import { ScrollView, View, Text } from "react-native";
+import styled from "styled-components/native";
 
 interface Spent {
   spent: number;
 }
 
 const Txt = styled.Text<Spent>`
-  color: ${(props) => (props.spent < 0 ? '#501e1d' : '#1d4932')};
+  color: ${(props) => (props.spent < 0 ? "#501e1d" : "#1d4932")};
 `;
 
 const Card = styled.View<Spent>`
   justify-content: space-between;
-  background-color: ${(props) => (props.spent < 0 ? '#fff4f6' : '#ebfaf0')};
+  background-color: ${(props) => (props.spent < 0 ? "#fff4f6" : "#ebfaf0")};
   padding: 20px;
   border-radius: 10px;
   min-width: 150px;
@@ -635,32 +635,32 @@ const Card = styled.View<Spent>`
 const data = [
   {
     id: 0,
-    month: 'July',
+    month: "July",
     incoming: 555,
     outgoing: 400,
   },
 
   {
     id: 1,
-    month: 'August',
+    month: "August",
     incoming: 1000,
     outgoing: 1400,
   },
   {
     id: 2,
-    month: 'December',
+    month: "December",
     incoming: 1555,
     outgoing: 3400,
   },
   {
     id: 3,
-    month: 'December',
+    month: "December",
     incoming: 1555,
     outgoing: 3400,
   },
   {
     id: 4,
-    month: 'December',
+    month: "December",
     incoming: 1555,
     outgoing: 3400,
   },
@@ -702,10 +702,10 @@ export default Analytics;
 Analytics is a horizontal scroll view of the mapped fake data, we are also setting the color and background color of each card to be red or green depending on net spend for that month. We have a helper function that returns the net sum of transactions, and in out **Text** we are passing the returned value as props to the styled component which then sets the color depending on the returned value. Finally import both components in **Accounts**:
 
 ```ts
-import React from 'react';
-import Layout from '../Layout';
-import Analytics from './Analytics';
-import RecentTransactions from './RecentTransaction';
+import React from "react";
+import Layout from "../Layout";
+import Analytics from "./Analytics";
+import RecentTransactions from "./RecentTransaction";
 
 export interface AccountProps {}
 
@@ -728,11 +728,11 @@ Our results:
 Finally in **App.tsx**, we have to create the last bit: The buttons fixed to the bottom of the screen. I am calling it **QuickAccessButtons**:
 
 ```ts
-import * as React from 'react';
-import { View, Text, TouchableWithoutFeedback } from 'react-native';
-import styled from 'styled-components/native';
-import Svg, { Path } from 'react-native-svg';
-import { Row } from '../components/header/Header.style';
+import * as React from "react";
+import { View, Text, TouchableWithoutFeedback } from "react-native";
+import styled from "styled-components/native";
+import Svg, { Path } from "react-native-svg";
+import { Row } from "../components/header/Header.style";
 
 const TextStyled = styled.Text`
   font-size: 16px;
@@ -745,16 +745,16 @@ const QuickAccessButtons: React.FC = () => {
   return (
     <View
       style={{
-        position: 'absolute',
-        bottom: '5%',
-        flexDirection: 'row',
-        alignSelf: 'center',
+        position: "absolute",
+        bottom: "5%",
+        flexDirection: "row",
+        alignSelf: "center",
         padding: 5,
         paddingRight: 10,
         paddingLeft: 10,
-        backgroundColor: '#f9fafe',
+        backgroundColor: "#f9fafe",
         borderRadius: 50,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: {
           width: 0,
           height: 2,
@@ -769,21 +769,21 @@ const QuickAccessButtons: React.FC = () => {
         <Row
           style={{
             borderRightWidth: 1,
-            borderColor: '#999',
+            borderColor: "#999",
             margin: 10,
           }}
         >
           <Svg
-            aria-hidden='true'
-            data-prefix='fas'
-            data-icon='exchange-alt'
-            viewBox='0 0 512 512'
+            aria-hidden="true"
+            data-prefix="fas"
+            data-icon="exchange-alt"
+            viewBox="0 0 512 512"
             width={15}
             height={15}
           >
             <Path
-              fill='#001cad'
-              d='M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z'
+              fill="#001cad"
+              d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
             ></Path>
           </Svg>
           <TextStyled style={{ marginRight: 10 }}>Transfer</TextStyled>
@@ -792,17 +792,17 @@ const QuickAccessButtons: React.FC = () => {
       <TouchableWithoutFeedback onPress={() => {}}>
         <Row>
           <Svg
-            aria-hidden='true'
-            data-prefix='fas'
-            data-icon='exchange-alt'
-            viewBox='0 0 512 512'
+            aria-hidden="true"
+            data-prefix="fas"
+            data-icon="exchange-alt"
+            viewBox="0 0 512 512"
             width={15}
             height={15}
-            style={{ transform: [{ rotate: '90deg' }], marginLeft: 10 }}
+            style={{ transform: [{ rotate: "90deg" }], marginLeft: 10 }}
           >
             <Path
-              fill='#001cad'
-              d='M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z'
+              fill="#001cad"
+              d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"
             ></Path>
           </Svg>
           <TextStyled>Exchange</TextStyled>

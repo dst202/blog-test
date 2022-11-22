@@ -26,4 +26,4 @@ yarn add @types/mailchimp__mailchimp_marketing
 
 - setup form inputs to collect emails
 
-<!-- ![github user profile repository](https://res.cloudinary.com/cortehz/image/upload/v1623190866/blog_images/github-repos.png) -->
+![github user profile repository](https://res.cloudinary.com/cortehz/image/upload/v1623190866/blog_images/github-repos.png)

@@ -477,25 +477,25 @@ footer {
 }
 
 .shareArticle {
-  font-family: $fontNunito;
+  font-family: $fontJura;
   max-width: 730px;
   align-items: center;
   margin: auto;
   display: flex;
-  color: #d3d3d3;
+  color: $primaryBrown;
   margin-bottom: 5rem;
 }
 
 .hr-div {
   display: flex;
   flex: 5;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .share_article_hr {
-  border-top: 1px solid #d3d3d3;
-  width: 75%;
-  margin-top: 7px;
+  border-top: 1px solid $primaryBrown;
+  width: 80%;
+  margin-top: 12px;
   margin-right: 10px;
 }
 

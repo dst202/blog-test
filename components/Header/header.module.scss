@@ -27,56 +27,56 @@
     }
   }
 
-  @media (max-width: 690px) {
-    .nav_links {
-      position: absolute;
-      flex-direction: column;
-      background: #d5c2ec;
-      padding: 2.5rem;
-      padding-left: 2rem;
-      justify-content: flex-end;
-      align-content: flex-end;
-      right: 2rem;
-      transform: translateY(-200%);
-      top: $large;
-      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-      transition: ease-in-out 0.3s;
-      border-radius: 10px;
-      z-index: 2000;
+  // @media (max-width: 690px) {
+  //   .nav_links {
+  //     position: absolute;
+  //     flex-direction: column;
+  //     background: #d5c2ec;
+  //     padding: 2.5rem;
+  //     padding-left: 2rem;
+  //     justify-content: flex-end;
+  //     align-content: flex-end;
+  //     right: 2rem;
+  //     transform: translateY(-200%);
+  //     top: $large;
+  //     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  //     transition: ease-in-out 0.3s;
+  //     border-radius: 10px;
+  //     z-index: 2000;
 
-      .link_item {
-        margin-bottom: 1rem;
-        margin-right: 0;
+  //     .link_item {
+  //       margin-bottom: 1rem;
+  //       margin-right: 0;
 
-        &:nth-last-child(1) a {
-          color: $darkerPurple;
-        }
-      }
+  //       &:nth-last-child(1) a {
+  //         color: $darkerPurple;
+  //       }
+  //     }
 
-      .link_item_ {
-        margin-right: 0;
-      }
+  //     .link_item_ {
+  //       margin-right: 0;
+  //     }
 
-      .link_item_button {
-        display: block;
-        margin-top: 0.6rem;
-      }
-    }
+  //     .link_item_button {
+  //       display: block;
+  //       margin-top: 0.6rem;
+  //     }
+  //   }
 
-    .nav_active {
-      transform: translateY(0%);
-    }
+  //   .nav_active {
+  //     transform: translateY(0%);
+  //   }
 
-    .hamburger {
-      display: flex;
-      position: absolute;
-      right: 2rem;
+  //   .hamburger {
+  //     display: flex;
+  //     position: absolute;
+  //     right: 2rem;
 
-      #hamburgerImage {
-        filter: drop-shadow(0 20px 40px -14px rgba(0, 0, 0, 0.25));
-      }
-    }
-  }
+  //     #hamburgerImage {
+  //       filter: drop-shadow(0 20px 40px -14px rgba(0, 0, 0, 0.25));
+  //     }
+  //   }
+  // }
 }
 
 .brand {

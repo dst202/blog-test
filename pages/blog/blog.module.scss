@@ -1,4 +1,4 @@
-@import '@scss/variables.scss';
+@import "@scss/variables.scss";
 
 .list {
   display: flex;
@@ -130,4 +130,9 @@
     }
   }
   margin-bottom: 2rem;
+}
+
+.empty {
+  padding: 2rem 0;
+  min-height: 20vh;
 }

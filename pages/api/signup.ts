@@ -27,7 +27,7 @@ export default async function handler(
     );
 
     res.status(200).json({
-      message: `Welcome, you will receive article updates in ${email_address}`,
+      message: `You will receive article updates in ${email_address}`,
     });
   } catch (err) {
     const errorResponse = JSON.parse(err.response.text);

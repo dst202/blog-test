@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './input.module.scss';
+import React from "react";
+import styles from "./input.module.scss";
 
-interface InputProps extends React.ComponentPropsWithoutRef<'input'> {
+interface InputProps extends React.ComponentPropsWithoutRef<"input"> {
   type: string;
   placeholder: string;
   required?: boolean;
@@ -11,7 +11,7 @@ const Input = ({ type, placeholder, ...props }: InputProps) => {
   return (
     <input
       className={input}
-      type={'email'}
+      type={"email"}
       placeholder={placeholder}
       {...props}
     />

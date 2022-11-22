@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { TwitterIcon } from "@components/icons";
 
 const components: object = {
   code({ node, inline, className, children, ...props }) {
@@ -72,13 +73,13 @@ export default function Post({ postData }) {
         <div className="shareArticle">
           <div className="hr-div">
             <div className="share_article_hr"></div>{" "}
-            <span>SHARE ARTICLE ON</span>
+            <span>Share article on</span>
           </div>
 
           <a
             href={`https://twitter.com/intent/tweet?url=https://samuelomanchi.me/blog/${postData.slug}&text=${postData.title}&via=cortehzz`}
           >
-            Twitter
+            <TwitterIcon />
           </a>
         </div>
       </Layout>

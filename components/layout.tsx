@@ -23,9 +23,9 @@ export const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
 
-        {/* <script
+        <script
           async
-          src='https://www.googletagmanager.com/gtag/js?id=UA-134151606-2'
+          src="https://www.googletagmanager.com/gtag/js?id=UA-134151606-2"
         ></script>
 
         <script
@@ -37,7 +37,7 @@ export const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
             
               gtag('config', 'UA-134151606-2');`,
           }}
-        /> */}
+        />
       </Head>
 
       <main>{children}</main>

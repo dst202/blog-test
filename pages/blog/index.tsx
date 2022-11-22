@@ -63,7 +63,7 @@ export default function Home({ allPostsData }) {
             </h1>
             <div className="filter-posts">
               <Input
-                type="text"
+                type="search"
                 placeholder="Find post easily"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -86,7 +86,11 @@ export default function Home({ allPostsData }) {
             {filteredPosts.length ? (
               <BlogList styles={styles} allPostsData={filteredPosts} />
             ) : (
-              <div className="empty-post-section">Couldnt find post(s)</div>
+              <div className={styles.empty}>
+                Couldn't find any{" "}
+                {Object.values(selected)[0] ? Object.keys(selected) : ""}{" "}
+                post(s)
+              </div>
             )}
           </section>
           <section
