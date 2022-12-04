@@ -198,20 +198,28 @@
   font-family: "JetBrains Mono" !important;
   background-color: $primaryGold;
   max-width: "calc(100% + 64px)";
+  overflow-x: hidden;
 }
 
 .article pre {
-  background-color: #f5f6f9;
-
+  background-color: rgb(17, 27, 39);
   margin-right: -32px;
   margin-left: -32px;
   margin-top: 2rem;
   margin-bottom: 2rem;
   max-height: 75vh;
   overflow-y: scroll;
+
   border-radius: 10px;
   @media only screen and (max-width: 700px) {
     margin-left: 0rem;
     margin-right: 0rem;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 10px;
+    height: 4px;
   }
 }

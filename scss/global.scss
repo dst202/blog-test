@@ -35,7 +35,8 @@ h2 {
 
 @media (orientation: landscape) {
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 4px;
+    height: 4px;
     background-color: var(--color-gray-100);
   }
 }
@@ -43,8 +44,7 @@ h2 {
 @media (orientation: landscape) {
   ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background-color: #5a6072;
-    border: 2px solid #eff1f5;
+    background-color: $primaryGold;
   }
 }
 

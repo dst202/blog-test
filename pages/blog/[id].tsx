@@ -7,6 +7,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { coldarkDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { TwitterIcon } from "@components/icons";
 
 const components: object = {
@@ -15,10 +16,10 @@ const components: object = {
     return !inline && match ? (
       <SyntaxHighlighter
         customStyle={{
-          background: "#f5f6f9",
           borderRadius: "10px",
           fontSize: "18px",
         }}
+        style={coldarkDark}
         language={match[1]}
         PreTag="div"
         children={String(children).replace(/\n$/, "")}
