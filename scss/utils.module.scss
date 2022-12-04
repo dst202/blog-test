@@ -215,11 +215,13 @@
     margin-left: 0rem;
     margin-right: 0rem;
   }
+
+  @media (orientation: landscape) {
+    ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+    }
+  }
   &::-webkit-scrollbar {
     width: 4px;
-  }
-  ::-webkit-scrollbar-thumb:horizontal {
-    border-radius: 10px;
-    height: 4px;
   }
 }
