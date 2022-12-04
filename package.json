@@ -11,6 +11,7 @@
     "@mailchimp/mailchimp_marketing": "^3.0.78",
     "@types/mailchimp__mailchimp_marketing": "^3.0.5",
     "@types/md5": "^2.3.2",
+    "@vercel/analytics": "^0.1.5",
     "date-fns": "^2.21.1",
     "gray-matter": "^4.0.3",
     "md5": "^2.3.0",
