@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }) {
         ></script>
 
         <script
-          async
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
