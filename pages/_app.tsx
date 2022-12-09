@@ -1,29 +1,30 @@
-import SiteAnalyticsScript from "@lib/PageScript";
 import "@scss/global.scss";
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
+import { NextScript } from "next/document";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Script
-        strategy="lazyOnload"
+      <script
+        async
         src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
       />
 
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
               page_path: window.location.pathname,
             });
-                `}
-      </Script>
+                `,
+        }}
+      />
       <Component {...pageProps} />
       <Analytics />
-      <SiteAnalyticsScript />
+      <NextScript />
     </>
   );
 }
