@@ -1,4 +1,4 @@
-@import "@scss/variables.scss";
+@import '@scss/variables.scss';
 
 //hero section style
 .heroCopy {
@@ -24,11 +24,9 @@
   }
 
   .imageContainer {
-    width: 95px;
-    height: 95px;
+    position: relative;
     img {
       border-radius: 50%;
-      max-width: 100%;
     }
   }
 

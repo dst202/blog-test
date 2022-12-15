@@ -1,10 +1,10 @@
 ---
-title: "How to make requests to a GraphQL API in vanilla JavaScript"
-slug: "GraphQL-API-in-vanilla-JavaScript"
-date: "2021-06-09"
-description: "Learn how to query the Github GraphQl API to make a clone of the github user profile repositories page..."
-image: "https://res.cloudinary.com/cortehz/image/upload/v1657960274/blog_images/main-image/graphQl.png"
-tags: ["javascript"]
+title: 'How to make requests to a GraphQL API in vanilla JavaScript'
+slug: 'GraphQL-API-in-vanilla-JavaScript'
+date: '2021-06-09'
+description: 'Learn how to query the Github GraphQl API to make a clone of the github user profile repositories page...'
+image: 'https://res.cloudinary.com/cortehz/image/upload/v1671086836/blog_images/main-image/graphQl.webp'
+tags: ['javascript']
 ---
 
 Github has a GraphQl API where that "offers flexibility and the ability to define precisely the data you want to fetch" according to the [docs](https://docs.github.com/en/graphql/overview/about-the-graphql-api) and I completely agree. So, we are going to take it for a spin and build a Github profile repositories page that should look just like this.
@@ -56,12 +56,12 @@ After scaffolding a basic html, css and javascript project as above. Link _style
 /**
  * - Github graphql single api endpoint.
  */
-const GITHUB_GRAPHQL_ENDPOINT = "https://api.github.com/graphql";
+const GITHUB_GRAPHQL_ENDPOINT = 'https://api.github.com/graphql';
 
 //async function to run our http request immediately we run the web server
 (async function () {
   //variable holding the requested user's username
-  const username = "cortehz";
+  const username = 'cortehz';
 
   //graphql query to get needed data
   const data = {
@@ -110,10 +110,10 @@ query GetUserGithubDetails($username: String!){
 
   //awaiting fetch request
   const response = await fetch(GITHUB_GRAPHQL_ENDPOINT, {
-    method: "post",
-    mode: "cors",
+    method: 'post',
+    mode: 'cors',
     headers: {
-      Accept: "application/json",
+      Accept: 'application/json',
       Authorization: `Bearer ${API_TOKEN}`,
     },
     body: JSON.stringify(data),
@@ -744,15 +744,15 @@ Next we want to actually show the user some data when they are in the repository
 //tabs for top navigation
 
 //select all tab DOM items/links
-const tabs = document.querySelectorAll(".tabs li");
+const tabs = document.querySelectorAll('.tabs li');
 
 //select all tab link content
-const sections = document.querySelectorAll(".nav__tabs__content .tab__content");
+const sections = document.querySelectorAll('.nav__tabs__content .tab__content');
 
 // click handler to all tabs that removes the current active tab and
 // adds the currently clicked one as active
 tabs.forEach((tab) => {
-  tab.addEventListener("click", (e) => {
+  tab.addEventListener('click', (e) => {
     e.preventDefault();
     removeActiveTab();
     addActiveTab(tab);
@@ -762,20 +762,20 @@ tabs.forEach((tab) => {
 //loop through individual tab links and content and remove the is__active class
 const removeActiveTab = () => {
   tabs.forEach((tab) => {
-    tab.classList.remove("is__active");
+    tab.classList.remove('is__active');
   });
   sections.forEach((section) => {
-    section.classList.remove("is__active");
+    section.classList.remove('is__active');
   });
 };
 
 //add active class to currently clicked one and match the href to the tab section
 //href on each tab link maps to the id of the content then adds an is__active class to that element
 const addActiveTab = (tab) => {
-  tab.classList.add("is__active");
-  const href = tab.querySelector("a").getAttribute("href");
+  tab.classList.add('is__active');
+  const href = tab.querySelector('a').getAttribute('href');
   const matchingSection = document.querySelector(href);
-  matchingSection.classList.add("is__active");
+  matchingSection.classList.add('is__active');
 };
 ```
 
@@ -787,14 +787,14 @@ const { allRepos, avatarUrl, bio, login, name, repositories } =
   window.history.state[0].user;
 
 //get all the DOM elements we want to pass our incoming data to
-const avatar = document.querySelector(".profile__avatar"),
-  headerProfilehumbnail = document.querySelector(".profile__thumbnail"),
-  fullName = document.querySelector(".user__name"),
-  username = document.querySelector(".username"),
-  userBio = document.querySelector(".user__bio"),
-  allRepoCount = document.querySelector(".repo__total"),
-  repoResultShowing = document.querySelector(".repos__showing"),
-  repoDetailsContainer = document.querySelector(".repository__container");
+const avatar = document.querySelector('.profile__avatar'),
+  headerProfilehumbnail = document.querySelector('.profile__thumbnail'),
+  fullName = document.querySelector('.user__name'),
+  username = document.querySelector('.username'),
+  userBio = document.querySelector('.user__bio'),
+  allRepoCount = document.querySelector('.repo__total'),
+  repoResultShowing = document.querySelector('.repos__showing'),
+  repoDetailsContainer = document.querySelector('.repository__container');
 
 //set the src for images and innerHTML of our selected elements to incoming data
 avatar.src = avatarUrl;
@@ -816,14 +816,14 @@ const repoList = repositories.nodes
     return `<li class="repository__container_list">
       <div class="repo__detail">
         <a href="#">${name}</a>
-        <p class="repo__description">${description ? description : ""}</p>
+        <p class="repo__description">${description ? description : ''}</p>
         <span class="repo__tags">
           <div class="tag">
           <span class="language__color" style="background: ${
-            languages.nodes.length ? languages.nodes[0].color : ""
+            languages.nodes.length ? languages.nodes[0].color : ''
           }">
           </span>
-          ${languages.nodes.length ? languages.nodes[0].name : ""}
+          ${languages.nodes.length ? languages.nodes[0].name : ''}
           </div>
           <div class="tag">
           <img alt="star icon for stars count" src="/assets/images/star-regular.svg"/>
@@ -840,7 +840,7 @@ const repoList = repositories.nodes
       <button class="star__button"> <img alt="star icon for stars count" src="/assets/images/star-regular.svg"/> star</button>
     </li>`;
   })
-  .join("");
+  .join('');
 
 repoDetailsContainer.innerHTML = repoList;
 ```

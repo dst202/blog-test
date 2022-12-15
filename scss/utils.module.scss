@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 .heading2Xl {
   font-size: 2.5rem;
@@ -111,6 +111,7 @@
     padding: 8px;
     .imageContainer {
       flex: 1;
+      position: relative;
     }
     .rightDescription {
       padding: 1.5rem;
@@ -141,12 +142,13 @@
     }
     .imageContainer {
       flex: 2;
-      img {
-        height: 169px;
-        width: 176px;
-        object-fit: cover;
-        max-width: 100%;
-      }
+      position: relative;
+      // img {
+      //   height: 169px;
+      //   width: 176px;
+      //   object-fit: cover;
+      //   max-width: 100%;
+      // }
     }
 
     .rightDescription {
@@ -195,9 +197,9 @@
 }
 
 .article code {
-  font-family: "JetBrains Mono" !important;
+  font-family: 'JetBrains Mono' !important;
   background-color: $primaryGold;
-  max-width: "calc(100% + 64px)";
+  max-width: 'calc(100% + 64px)';
   overflow-x: hidden;
 }
 
