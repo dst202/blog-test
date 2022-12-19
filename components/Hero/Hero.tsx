@@ -6,7 +6,11 @@ import heroStyles from './hero.module.scss';
 import { LinkedinIcon, TwitterIcon, GithubIcon, DribbbleIcon } from '../icons';
 
 export const socials = [
-  { link: '', icon: <DribbbleIcon />, socialName: 'Dribbble' },
+  {
+    link: 'https://dribbble.com/cortehz',
+    icon: <DribbbleIcon />,
+    socialName: 'Dribbble',
+  },
   {
     link: 'https://twitter.com/cortehzz',
     icon: <TwitterIcon />,
