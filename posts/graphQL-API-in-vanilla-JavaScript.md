@@ -1,5 +1,5 @@
 ---
-title: 'How to make requests to a GraphQL API in vanilla JavaScript'
+title: 'Make requests to the GitHub GraphQL API with JavaScript'
 slug: 'GraphQL-API-in-vanilla-JavaScript'
 date: '2021-06-09'
 description: 'Learn how to query the Github GraphQl API to make a clone of the github user profile repositories page...'

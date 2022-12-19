@@ -1,15 +1,15 @@
-import Head from "next/head";
-import { siteTitle, Layout } from "@components/layout";
-import utilStyles from "@scss/utils.module.scss";
-import { getSortedPostsData } from "@lib/posts";
-import Link from "next/link";
-import Hero from "@components/Hero/Hero";
-import Header from "@components/Header/Header";
-import Footer from "@components/Footer";
-import React from "react";
-import Wrapper from "@components/Wrapper";
-import Career from "@components/Career";
-import BlogList from "@components/BlogList";
+import Head from 'next/head';
+import { siteTitle, Layout } from '@components/layout';
+import utilStyles from '@scss/utils.module.scss';
+import { getSortedPostsData } from '@lib/posts';
+import Link from 'next/link';
+import Hero from '@components/Hero/Hero';
+import Header from '@components/Header/Header';
+import Footer from '@components/Footer';
+import React from 'react';
+import Wrapper from '@components/Wrapper';
+import Career from '@components/Career';
+import BlogList from '@components/BlogList';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -35,16 +35,20 @@ export default function Home({ allPostsData }) {
         <Layout>
           <Wrapper>
             <>
-              <section className="blog" id="latest-blog">
+              <section className='blog' id='latest-blog'>
                 <h2>
                   <span>Blog</span>
                 </h2>
 
                 <h2>Latest Posts</h2>
 
-                <BlogList allPostsData={firstFourPost} styles={utilStyles} />
+                <BlogList
+                  allPostsData={firstFourPost}
+                  styles={utilStyles}
+                  home
+                />
                 <span className={utilStyles.link}>
-                  <Link href="/blog">
+                  <Link href='/blog'>
                     <a>View all posts</a>
                   </Link>
                 </span>
