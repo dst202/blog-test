@@ -24,7 +24,7 @@ const BlogList = ({ allPostsData, styles, home }: BlogListProps) => {
                 <Image
                   src={image}
                   alt={`Blog Image for ${title}`}
-                  height={index == 0 && home ? 250 : 169}
+                  height={index == 0 && home ? 350 : 169}
                   width={176}
                   objectFit='cover'
                 />
