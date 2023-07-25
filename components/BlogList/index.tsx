@@ -7,10 +7,11 @@ import Image from 'next/image';
 
 interface BlogListProps {
   allPostsData: any;
+  home?: boolean;
   styles: { [key: string]: string };
 }
 
-const BlogList = ({ allPostsData, styles }: BlogListProps) => {
+const BlogList = ({ allPostsData, styles, home }: BlogListProps) => {
   const { list, listItem, imageContainer, rightDescription, lightText, link } =
     styles;
   return (
@@ -23,7 +24,7 @@ const BlogList = ({ allPostsData, styles }: BlogListProps) => {
                 <Image
                   src={image}
                   alt={`Blog Image for ${title}`}
-                  height={index == 0 ? 250 : 169}
+                  height={index == 0 && home ? 350 : 169}
                   width={176}
                   objectFit='cover'
                 />
