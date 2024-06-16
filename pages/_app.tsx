@@ -1,7 +1,7 @@
-import "@scss/global.scss";
-import { Analytics } from "@vercel/analytics/react";
-import { NextScript } from "next/document";
-import Head from "next/head";
+import '@scss/global.scss';
+import { Analytics } from '@vercel/analytics/react';
+import { NextScript } from 'next/document';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -10,6 +10,12 @@ export default function App({ Component, pageProps }) {
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+        ></script>
+
+        <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1276398176503233'
+          crossOrigin='anonymous'
         ></script>
 
         <script
