@@ -129,7 +129,7 @@ const Footer = () => {
                       </svg>
                     )}
                     <Link href={link}>
-                      <a href={link}>{linkDescription}</a>
+                      {linkDescription}
                     </Link>
                   </li>
                 );

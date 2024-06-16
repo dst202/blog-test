@@ -22,43 +22,41 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   const firstFourPost = allPostsData.map((post) => post).splice(0, 4);
-  return (
-    <>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <Header home={true} />
-      <header>
-        <Hero />
-      </header>
-      <main>
-        <Layout>
-          <Wrapper>
-            <>
-              <section className='blog' id='latest-blog'>
-                <h2>
-                  <span>Blog</span>
-                </h2>
+  return <>
+    <Head>
+      <title>{siteTitle}</title>
+    </Head>
+    <Header home={true} />
+    <header>
+      <Hero />
+    </header>
+    <main>
+      <Layout>
+        <Wrapper>
+          <>
+            <section className='blog' id='latest-blog'>
+              <h2>
+                <span>Blog</span>
+              </h2>
 
-                <h2>Latest Posts</h2>
+              <h2>Latest Posts</h2>
 
-                <BlogList
-                  allPostsData={firstFourPost}
-                  styles={utilStyles}
-                  home
-                />
-                <span className={utilStyles.link}>
-                  <Link href='/blog'>
-                    <a>View all posts</a>
-                  </Link>
-                </span>
-              </section>
-            </>
-          </Wrapper>
-        </Layout>
-      </main>
-      {/* <Career /> */}
-      <Footer />
-    </>
-  );
+              <BlogList
+                allPostsData={firstFourPost}
+                styles={utilStyles}
+                home
+              />
+              <span className={utilStyles.link}>
+                <Link href='/blog'>
+                  View all posts
+                </Link>
+              </span>
+            </section>
+          </>
+        </Wrapper>
+      </Layout>
+    </main>
+    {/* <Career /> */}
+    <Footer />
+  </>;
 }

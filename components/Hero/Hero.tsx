@@ -67,15 +67,15 @@ const Hero = () => {
 
         <div className={heroStyles.social_icons_top}>
           {socials.map(({ link, icon, socialName }) => (
-            <Link href={link} key={link}>
-              <a
-                href={link}
-                target='_blanck'
-                aria-label={`Visit my profile on ${socialName}`}
-              >
-                {icon}
-              </a>
-            </Link>
+            (<Link
+              href={link}
+              key={link}
+              target='_blanck'
+              aria-label={`Visit my profile on ${socialName}`}>
+
+              {icon}
+
+            </Link>)
           ))}
         </div>
       </div>
