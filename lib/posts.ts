@@ -1,6 +1,7 @@
 import fs from 'fs';
-import path from 'path';
 import matter from 'gray-matter';
+import path from 'path';
+import { cache } from 'react';
 import remark from 'remark';
 import html from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'posts');
@@ -21,6 +22,11 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      slug: matterResult.data.slug,
+      tags: matterResult.data.tags,
+      description: matterResult.data.description,
       ...matterResult.data,
     };
   });
@@ -59,7 +65,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+export const getPostData = cache(async (id: string) => {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -77,6 +83,9 @@ export async function getPostData(id) {
     id,
     contentHtml,
     markdown: matterResult.content,
+    title: matterResult.data.title,
+    date: matterResult.data.date,
+    slug: matterResult.data.slug,
     ...matterResult.data,
   };
-}
+});

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import { Layout } from '../layout';
 import heroStyles from './hero.module.scss';
@@ -35,10 +35,13 @@ const Hero = () => {
         <Image
           src={'/images/self.webp'}
           alt={'Samuel Omanchi portrait'}
-          objectFit='cover'
           width={95}
           height={95}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </div>
       <div className={heroSection}>
         <h1 className={my_name}>Hi, My name is Samuel Omanchi</h1>
