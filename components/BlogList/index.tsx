@@ -3,7 +3,7 @@ import { getSortedPostsData } from '@lib/posts';
 import Date from '@components/Date';
 import Link from 'next/link';
 import { ArrowForwardIcon } from '@components/icons';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 interface BlogListProps {
   allPostsData: any;
