@@ -1,6 +1,5 @@
 import '@scss/global.scss';
 import { Analytics } from '@vercel/analytics/react';
-import { NextScript } from 'next/document';
 import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
