@@ -59,6 +59,7 @@ export default async function Post({ params }) {
         </div>
 
         <a
+          rel='noopener noreferrer'
           href={`https://twitter.com/intent/tweet?url=https://samuelomanchi.me/blog/${postData.slug}&text=${postData.title}&via=cortehzz`}
         >
           <TwitterIcon />

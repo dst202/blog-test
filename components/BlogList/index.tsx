@@ -46,10 +46,8 @@ const BlogList = ({ allPostsData, styles, home }: BlogListProps) => {
                   <p>{description}</p>
                   <Link href={`/blog/${id}`} legacyBehavior>
                     <span className={link}>
-                      <a>
-                        <span>Read</span>
-                        <ArrowForwardIcon />
-                      </a>
+                      <span>Read</span>
+                      <ArrowForwardIcon />
                     </span>
                   </Link>
                 </span>
