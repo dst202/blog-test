@@ -6,8 +6,8 @@ import styles from './blog.module.scss';
 import BlogList from '@components/BlogList';
 import Button from '@components/Forms/Button';
 import Input from '@components/Forms/Input';
+import { getSortedPostsData } from '@lib/posts';
 import React, { useState } from 'react';
-import { getSortedPostsData } from '../../../lib/posts';
 
 export default function BlogPostPage({
   allPostsData,

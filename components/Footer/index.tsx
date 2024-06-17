@@ -1,11 +1,16 @@
+'use client';
 import Button from '@components/Forms/Button';
 import Input from '@components/Forms/Input';
+import { links } from '@components/Header/Header';
 import { socials } from '@components/Hero/Hero';
 import { submitEmail } from '@lib/utils';
-
-import { SubscriptionMessage } from './SubcriptionMessage';
+import Link from 'next/link';
+import { useState } from 'react';
 
 const Footer = () => {
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(false);
+
   return (
     <footer className='footer-section'>
       <div className='footer-section-top'>
@@ -30,7 +35,18 @@ const Footer = () => {
             I write sometimes about web development. <br />
             Get notified when next I make a post.
           </p>
-          <form className='subscribe-form' action={submitEmail}>
+          <form
+            className='subscribe-form'
+            action={async (formData) => {
+              try {
+                await submitEmail(formData);
+                setMessage('You have successfully subscribed! 🎉');
+              } catch (err) {
+                setError(true);
+                setMessage('An error occured: ' + err?.message);
+              }
+            }}
+          >
             <div className={'inputContainer'}>
               <Input
                 type={'email'}
@@ -42,7 +58,9 @@ const Footer = () => {
 
             <Button label='Notify me' mode='primary' type={'submit'} />
           </form>
-          <SubscriptionMessage />
+          {message && (
+            <p style={{ color: error ? 'red' : 'green' }}>{message}</p>
+          )}
         </div>
 
         <div className='footer-links-right'>
@@ -66,7 +84,7 @@ const Footer = () => {
           </a>
 
           <ul className='footer-links'>
-            {/* {links.map(({ link, linkDescription }, index) => {
+            {links.map(({ link, linkDescription }, index) => {
               return (
                 <li key={link} className='footer-links'>
                   {index !== 0 && (
@@ -83,7 +101,7 @@ const Footer = () => {
                   <Link href={link}>{linkDescription}</Link>
                 </li>
               );
-            })}{' '} */}
+            })}
           </ul>
         </div>
       </div>

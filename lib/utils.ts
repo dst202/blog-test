@@ -2,7 +2,6 @@
 
 import mailchimp from '@mailchimp/mailchimp_marketing';
 import md5 from 'md5';
-import { redirect } from 'next/navigation';
 
 mailchimp.setConfig({
   apiKey: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
@@ -22,11 +21,8 @@ export async function submitEmail(formData: FormData) {
       `${subscriberHash}`,
       { email_address: `${email}`, status_if_new: 'subscribed' }
     );
-
-    redirect('?message=You have successfully subscribed! 🎉');
   } catch (err) {
-    console.log(err, 'errorrrrrrrrrrrrrrrr');
-    // const errorResponse = JSON.parse(err.response.text);
-    redirect(`?error&message=${'errorResponse.detail'}`);
+    const errorResponse = JSON.parse(err?.response?.text);
+    throw new Error(`${errorResponse.detail}`);
   }
 }

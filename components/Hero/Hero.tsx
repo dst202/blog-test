@@ -1,9 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
-import { Layout } from '../layout';
 import heroStyles from './hero.module.scss';
 
-import { LinkedinIcon, TwitterIcon, GithubIcon, DribbbleIcon } from '../icons';
+import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '../icons';
 
 export const socials = [
   {
@@ -38,10 +37,11 @@ const Hero = () => {
           width={95}
           height={95}
           style={{
-            maxWidth: "100%",
-            height: "auto",
-            objectFit: "cover"
-          }} />
+            maxWidth: '100%',
+            height: 'auto',
+            objectFit: 'cover',
+          }}
+        />
       </div>
       <div className={heroSection}>
         <h1 className={my_name}>Hi, My name is Samuel Omanchi</h1>
@@ -70,15 +70,14 @@ const Hero = () => {
 
         <div className={heroStyles.social_icons_top}>
           {socials.map(({ link, icon, socialName }) => (
-            (<Link
+            <Link
               href={link}
               key={link}
               target='_blanck'
-              aria-label={`Visit my profile on ${socialName}`}>
-
+              aria-label={`Visit my profile on ${socialName}`}
+            >
               {icon}
-
-            </Link>)
+            </Link>
           ))}
         </div>
       </div>

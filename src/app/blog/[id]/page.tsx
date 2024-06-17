@@ -1,10 +1,10 @@
+import Date from '@components/Date';
 import { TwitterIcon } from '@components/icons';
+import { getPostData } from '@lib/posts';
+import utilStyles from '@scss/utils.module.scss';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import Date from '../../../../components/Date';
-import { getPostData } from '../../../../lib/posts';
-import utilStyles from '../../../../scss/utils.module.scss';
 
 const components: object = {
   code({ node, inline, className, children, ...props }) {
