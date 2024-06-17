@@ -116,16 +116,15 @@
   }
 
   .link {
-    a {
-      display: flex;
+    display: flex;
+    flex-direction: row;
+    color: $primaryBlue;
+    text-decoration: none;
+    gap: 0.5rem;
+    align-items: center;
+    span {
       color: $primaryBlue;
-      text-decoration: none;
-      gap: 0.5rem;
-      align-items: center;
-      span {
-        color: $primaryBlue;
-        width: fit-content;
-      }
+      max-width: fit-content;
     }
   }
   margin-bottom: 2rem;

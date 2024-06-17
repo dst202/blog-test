@@ -40,11 +40,11 @@ const BlogList = ({ allPostsData, styles, home }: BlogListProps) => {
                   <small className={lightText}>
                     <Date dateString={date} />
                   </small>{' '}
-                  <Link href={`/blog/${id}`} className='title'>
+                  <Link href={`/blog/${id}`} className='title' prefetch>
                     {title}
                   </Link>
                   <p>{description}</p>
-                  <Link href={`/blog/${id}`} legacyBehavior>
+                  <Link href={`/blog/${id}`} prefetch>
                     <span className={link}>
                       <span>Read</span>
                       <ArrowForwardIcon />
