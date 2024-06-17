@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './button.module.scss';
 
 interface ButtonProps {
@@ -8,7 +7,7 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
 }
-const Button = ({ mode, label, className, ...props }: ButtonProps) => {
+const Button = ({ mode, label, className = '', ...props }: ButtonProps) => {
   const { button } = styles;
   return (
     <button className={`${button} ${styles[className]}`} {...props}>

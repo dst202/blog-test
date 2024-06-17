@@ -1,9 +1,8 @@
-import React from 'react';
-import { getSortedPostsData } from '@lib/posts';
 import Date from '@components/Date';
-import Link from 'next/link';
 import { ArrowForwardIcon } from '@components/icons';
 import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 interface BlogListProps {
   allPostsData: any;
@@ -17,40 +16,47 @@ const BlogList = ({ allPostsData, styles, home }: BlogListProps) => {
   return (
     <ul className={list}>
       {allPostsData.map(
-        ({ id, date, title, description, tags, image }, index) => (
-          <React.Fragment key={id}>
-            <li className={listItem}>
-              <span className={imageContainer}>
-                <Image
-                  src={image}
-                  alt={`Blog Image for ${title}`}
-                  height={index == 0 && home ? 350 : 169}
-                  width={176}
-                  objectFit='cover'
-                />
-              </span>
+        ({ id, date, title, description, tags, image }, index) => {
+          const imageProps = {
+            ...(home && index === 0
+              ? { fill: true }
+              : { height: 130, width: 350 }),
+          };
 
-              {/* <span>10 mins read</span> */}
-              <span className={rightDescription}>
-                <small className={lightText}>
-                  <Date dateString={date} />
-                </small>{' '}
-                <Link href={`/blog/${id}`}>
-                  <a className='title'>{title}</a>
-                </Link>
-                <p>{description}</p>
-                <Link href={`/blog/${id}`}>
-                  <span className={link}>
-                    <a>
-                      <span>Read</span>
-                      <ArrowForwardIcon />
-                    </a>
-                  </span>
-                </Link>
-              </span>
-            </li>
-          </React.Fragment>
-        )
+          return (
+            <React.Fragment key={id}>
+              <li className={listItem}>
+                <span className={imageContainer}>
+                  <Image
+                    src={image}
+                    alt={`Blog Image for ${title}`}
+                    objectFit='cover'
+                    {...imageProps}
+                  />
+                </span>
+
+                {/* <span>10 mins read</span> */}
+                <span className={rightDescription}>
+                  <small className={lightText}>
+                    <Date dateString={date} />
+                  </small>{' '}
+                  <Link href={`/blog/${id}`} className='title'>
+                    {title}
+                  </Link>
+                  <p>{description}</p>
+                  <Link href={`/blog/${id}`} legacyBehavior>
+                    <span className={link}>
+                      <a>
+                        <span>Read</span>
+                        <ArrowForwardIcon />
+                      </a>
+                    </span>
+                  </Link>
+                </span>
+              </li>
+            </React.Fragment>
+          );
+        }
       )}
     </ul>
   );
