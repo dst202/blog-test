@@ -2,6 +2,7 @@ import Date from '@components/Date';
 import { TwitterIcon } from '@components/icons';
 import { getPostData } from '@lib/posts';
 import utilStyles from '@scss/utils.module.scss';
+import Script from 'next/script';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
@@ -65,6 +66,25 @@ export default async function Post({ params }) {
           <TwitterIcon />
         </a>
       </div>
+      <div className='giscus' />
+
+      <Script
+        src='https://giscus.app/client.js'
+        data-repo='cortehz/samuelomanchi.me'
+        data-repo-id='MDEwOlJlcG9zaXRvcnkyODkzNDI2ODY='
+        data-category='General'
+        data-category-id='DIC_kwDOET8E3s4CgLk7'
+        data-mapping='pathname'
+        data-strict='0'
+        data-reactions-enabled='1'
+        data-emit-metadata='0'
+        data-input-position='top'
+        data-theme='light_protanopia'
+        data-lang='en'
+        data-loading='lazy'
+        crossOrigin='anonymous'
+        async
+      />
     </>
   );
 }
