@@ -56,7 +56,7 @@ export default function BlogPostPage({
           />
 
           <div className='category-buttons'>
-            {['React', 'React Native', 'Javascript', 'CSS', 'NextJS'].map(
+            {['Reactjs', 'React Native', 'Javascript', 'CSS', 'Nextjs'].map(
               (buttonItem) => (
                 <Button
                   key={buttonItem}

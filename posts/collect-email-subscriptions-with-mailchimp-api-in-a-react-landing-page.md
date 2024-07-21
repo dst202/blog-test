@@ -4,7 +4,7 @@ slug: 'email-subscriptions-with-mailchimp'
 date: '2022-12-19'
 description: 'Build an easily audience for you blog by collecting email subscriptions with Mailchimp API using NextJS.'
 image: 'https://res.cloudinary.com/cortehz/image/upload/c_scale,w_1450/v1671488871/blog_images/main-image/next_mailchimp.webp'
-tags: ['nextjs']
+tags: ['nextjs', 'reactjs']
 ---
 
 If you are looking to collect emails for your audience and keep them updated on your content, the Mailchimp API is a great tool to use in combination with NextJS.

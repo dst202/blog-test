@@ -6,22 +6,42 @@ import Script from 'next/script';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { coldarkDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { CopyButton } from './CopyButton';
+
+const LinkRenderer = (props) => {
+  return (
+    <a href={props.href} target='_blank' rel='noopener noreferrer'>
+      {props.children}
+    </a>
+  );
+};
 
 const components: object = {
+  a: LinkRenderer,
   code({ node, inline, className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || '');
+
+    const codeString = String(children).replace(/\n$/, '');
+
     return !inline && match ? (
-      <SyntaxHighlighter
-        customStyle={{
-          borderRadius: '10px',
-          fontSize: '18px',
+      <div
+        style={{
+          position: 'relative',
         }}
-        style={coldarkDark}
-        language={match[1]}
-        PreTag='div'
-        children={String(children).replace(/\n$/, '')}
-        {...props}
-      />
+      >
+        <SyntaxHighlighter
+          customStyle={{
+            borderRadius: '10px',
+            fontSize: '18px',
+          }}
+          style={coldarkDark}
+          language={match[1]}
+          PreTag='div'
+          children={String(children).replace(/\n$/, '')}
+          {...props}
+        />
+        <CopyButton codeString={codeString} />
+      </div>
     ) : (
       <code
         className={className}
