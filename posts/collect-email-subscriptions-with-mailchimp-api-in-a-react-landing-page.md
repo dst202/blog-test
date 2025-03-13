@@ -3,7 +3,7 @@ title: 'JTAGprobe a pico based JTAG and SWD debugger'
 slug: 'email-subscriptions-with-mailchimp'
 date: '2022-12-19'
 description: 'Make a debugger using PICO to debug MCUs'
-image: 'https://images.unsplash.com/photo-1611663806011-b37e091090f0?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+image: 'https://github.com/dst202/JTAGprobe/blob/main/images/title.jpg'
 tags: ['nextjs', 'reactjs']
 ---
 
