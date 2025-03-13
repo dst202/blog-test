@@ -38,7 +38,7 @@ The firmware was developed in C with the following key features:
 ## Firmware Implementation
 
 Below is a simplified code snippet that demonstrates the initialization of the debugging interface:
-```cpp
+```bash
 #include "pico/stdlib.h"
 #include "jtag_interface.h"
 #include "openocd_adapter.h"
