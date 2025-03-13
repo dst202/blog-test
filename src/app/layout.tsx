@@ -8,9 +8,9 @@ import { Metadata } from 'next';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: 'Samuel Omanchi - Frontend Engineer',
+  title: 'Surya Chilukuri - EmbeddedEngineer',
   description:
-    'Welcome to my personal portfolio and blog! My name is Samuel Omanchi. I am a frontend developer with a passion for creating intuitive and engaging user experiences. Explore my portfolio to see some of my recent projects, and check out my blog for insights on frontend development and the latest industry trends.',
+    'Welcome to my personal portfolio and blog! My name is Devi Surya Teja Chilukuri, an Electrical and Embedded Systems Engineer based in Regensburg, Germany. I specialize in creating innovative hardware and firmware solutions for automotive, IoT, and industrial applications. Explore my portfolio to see projects like a low-cost RP2040-based JTAG debugger and more, and visit my blog for technical insights and the latest trends in embedded systems and electronics.',
 };
 
 export default function RootLayout({
