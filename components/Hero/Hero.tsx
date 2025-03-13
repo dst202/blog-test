@@ -42,7 +42,7 @@ const Hero = () => {
         <h1 className={my_name}>Hi, My name is Surya Chilukuri</h1>
 
         <ul className={duties}>
-          {['Frontend Engineer', 'Embedded developer'].map(
+          {['Embedded Engineer', 'Hardware developer'].map(
             (title, index) => (
               <li key={title}>
                 <span>{title}</span>

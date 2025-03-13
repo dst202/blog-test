@@ -79,7 +79,7 @@ const Footer = () => {
             ))}
           </ul>
           <h5>Say hi</h5>
-          <a href='mailto:hello@samuelomanchi.me' className='email'>
+          <a href='mailto:suryachilukuri@protonmail.com' className='email'>
             hello@samuelomanchi.me
           </a>
 
