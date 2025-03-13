@@ -3,7 +3,7 @@ title: 'JTAGprobe a pico based JTAG and SWD debugger'
 slug: 'email-subscriptions-with-mailchimp'
 date: '2022-12-19'
 description: 'Make a debugger using PICO to debug MCUs'
-image: 'https://github.com/dst202/JTAGprobe/blob/main/images/title.jpg'
+image: '/public/images/jtagprobe/title_1.webp'
 tags: ['nextjs', 'reactjs']
 ---
 
@@ -32,9 +32,9 @@ You can download **UF2** file or download entire code and build it as mentioned 
 
 # Images of debugging PICO with another PICO and Bluepill
 
-![Bluepill Debug](https://github.com/dst202/JTAGprobe/blob/main/images/bluepilldebug.jpg)
+![Bluepill Debug](/public/images/jtagprobe/bluepilldebug.webp)
 
-![Pico Debug](https://github.com/dst202/JTAGprobe/blob/main/images/picodebug.jpg)
+![Pico Debug](/public/images/jtagprobe/picodebug_1.webp)
 
 
 
