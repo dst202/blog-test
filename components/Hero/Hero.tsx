@@ -6,22 +6,17 @@ import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '../icons';
 
 export const socials = [
   {
-    link: 'https://dribbble.com/cortehz',
-    icon: <DribbbleIcon />,
-    socialName: 'Dribbble',
-  },
-  {
-    link: 'https://twitter.com/cortehzz',
+    link: 'https://twitter.com/surya_chilukur',
     icon: <TwitterIcon />,
     socialName: 'Twitter',
   },
   {
-    link: 'https://www.linkedin.com/in/samuel-omanchi-aa49708a/',
+    link: 'https://www.linkedin.com/in/suryachilukuri/',
     icon: <LinkedinIcon />,
     socialName: 'Linkedin',
   },
   {
-    link: 'https://github.com/cortehz',
+    link: 'https://github.com/dst202',
     icon: <GithubIcon />,
     socialName: 'Github',
   },
@@ -33,7 +28,7 @@ const Hero = () => {
       <div className={imageContainer}>
         <Image
           src={'/images/self.webp'}
-          alt={'Samuel Omanchi portrait'}
+          alt={'Surya Chilukuri portrait'}
           width={95}
           height={95}
           style={{
@@ -44,10 +39,10 @@ const Hero = () => {
         />
       </div>
       <div className={heroSection}>
-        <h1 className={my_name}>Hi, My name is Samuel Omanchi</h1>
+        <h1 className={my_name}>Hi, My name is Surya Chilukuri</h1>
 
         <ul className={duties}>
-          {['Frontend Engineer', 'User Interface Designer'].map(
+          {['Frontend Engineer', 'Embedded developer'].map(
             (title, index) => (
               <li key={title}>
                 <span>{title}</span>

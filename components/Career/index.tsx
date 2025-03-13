@@ -1,21 +1,27 @@
 const Career = () => {
   const career = [
     {
-      employer: 'Snubes',
-      location: 'Berlin',
-      jobDescription: 'Frontend Engineer',
+      employer: 'NAF GmbH',
+      location: 'Freiberg, DE',
+      jobDescription: 'Hardware Engineer (Part time)',
       current: true,
     },
     {
-      employer: 'Intuitive AI',
-      location: 'Hamburg',
-      jobDescription: 'UI Designer & Frontend Engineer',
+      employer: 'Vitesco Technologies AG',
+      location: 'Regensburg, DE',
+      jobDescription: 'Pre-development Intern',
       current: false,
     },
     {
-      employer: 'A&G Software',
-      location: 'Bremen',
-      jobDescription: 'UI Designer & Frontend Engineer',
+      employer: 'ATOM Motors',
+      location: 'Guntur, IN',
+      jobDescription: 'BMS Test Engineer',
+      current: false,
+    },
+    {
+      employer: 'Silicon Touch Technologies',
+      location: 'Vijayawada, IN',
+      jobDescription: 'Embedded Systems Intern',
       current: false,
     },
   ];
@@ -24,7 +30,7 @@ const Career = () => {
     <section className='career' id='career'>
       <h2>Professional Career</h2>
 
-      <ul className={'career-list'}>
+      <ul className='career-list'>
         {career.map(({ current, jobDescription, location, employer }) => (
           <li key={employer}>
             <span className='circle-container'>
