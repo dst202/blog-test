@@ -80,7 +80,7 @@ const Footer = () => {
           </ul>
           <h5>Say hi</h5>
           <a href='mailto:suryachilukuri@protonmail.com' className='email'>
-            hello@samuelomanchi.me
+              suryachilukuri@protonmail.com
           </a>
 
           <ul className='footer-links'>

@@ -90,7 +90,7 @@ export default async function Post({ params }) {
 
       <Script
         src='https://giscus.app/client.js'
-        data-repo='cortehz/samuelomanchi.me'
+        data-repo='dst202/blog-test'
         data-repo-id='MDEwOlJlcG9zaXRvcnkyODkzNDI2ODY='
         data-category='General'
         data-category-id='DIC_kwDOET8E3s4CgLk7'
