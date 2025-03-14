@@ -16,9 +16,6 @@ ___
 The following is **GPIO pinout** for JTAG/SWD 
 
 
-
-
-
 | GPIO       | Pinout  |
 | --------   | ------- |
 | SWCLK_TCK  | 19      |
