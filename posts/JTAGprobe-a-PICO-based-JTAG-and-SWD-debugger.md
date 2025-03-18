@@ -16,14 +16,22 @@ ___
 The following is **GPIO pinout** for JTAG/SWD 
 
 
-    | GPIO       | Pinout  |
-    | --------   | ------- |
-    | SWCLK_TCK  | 19      |
-    | SWDIO_TMS  | 14      |
-    | TDI        | 18      |
-    | TDO        | 21      |
-    | nTRST      | 15      |
-    | nRESET     | 16      |
+| GPIO       | Pinout  |
+| --------   | ------- |
+| SWCLK_TCK  | 19      |
+| SWDIO_TMS  | 14      |
+| TDI        | 18      |
+| TDO        | 21      |
+| nTRST      | 15      |
+| nRESET     | 16      |
+
+
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 
 You can download **UF2** file or download entire code and build it as mentioned below.
 
