@@ -5,13 +5,15 @@ import { cache } from 'react';
 import remark from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
+
 import { marked } from 'marked';
-const html = marked(markdownText);
-console.log('HTML generated:', html);
+const htmlm = marked(markdownText);
+console.log('HTML generated:', htmlm);
+
 import Showdown from 'showdown';
 const converter = new Showdown.Converter({ tables: true });
-const html = converter.makeHtml(markdownText);
-console.log('HTML generated:', html); // Import the remark-gfm plugin
+const htmls = converter.makeHtml(markdownText);
+console.log('HTML generated:', htmls); // Import the remark-gfm plugin
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
